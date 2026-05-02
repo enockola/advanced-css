@@ -2,7 +2,7 @@
 
 **Student:** Enoch Olayemi
 **Semester:** Spring 2026
-**Live Site:** [View Site](https://your-username.github.io/your-repo-name/)
+**Live Site:** [Visit Site](https://enockola.github.io/advanced-css/)
 
 ## About
 
