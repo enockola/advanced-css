@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+li,
+td {
+  padding: 10px;
+  border: 1px solid gray;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* li:nth-child(3) {
+  background: yellow;
+} */
+
+/* 
+      DEMO 1: The "of S" Syntax
+
+      This means:
+      Count only .highlight items,
+      then select the 2nd one.
+    */
+
+/* li:nth-child(2 of .highlight) {
+      background: gold;
+    } */
+
+/*
+      DEMO 2: Critical Distinction
+
+      This means:
+      Select the 2nd child only if it has .highlight.
+    */
+
+/* li.highlight:nth-child(2) {
+      background: orange;
+    } */
+
+/*
+      This means:
+      Select the 2nd .highlight item.
+    */
+
+/* li:nth-child(2 of .highlight) {
+      background: gold;
+    } */
+
+/*
+      DEMO 3: First N Matching Items
+
+      This means:
+      Select the first 3 .priority items.
+    */
+    
+    /* li:nth-child(-n + 3 of .priority) {
+      border-left: 5px solid red;
+    } */
+   
+
+/*
+      DEMO 4: Quantity Query with Filters
+
+      This means:
+      If there are 4 or more .error items,
+      style all the .error items.
+    */
+
+li:nth-last-child(n + 4 of .error):first-child,
+    li:nth-last-child(n + 4 of .error):first-child ~ .error {
+      background: #fee2e2;
+    }
+
+/*
+      DEMO 5: Zebra Striping with Filtered Rows
+
+      This means:
+      Stripe only visible rows.
+      Hidden rows are ignored.
+    */
+
+tr:nth-child(odd of :not([hidden])) {
+  background: #93a9c0;
+}
