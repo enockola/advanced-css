@@ -1,6 +1,11 @@
 :root {
-    --color-bg: #f4f6f8;
-    --color-text: #1e293b;
-    --color-primary: #006eb6;
-    --color-primary-hover: #004f7f;
+  --color-bg: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+
+  --color-primary: #006eb6;
+  --color-primary-hover: #004f7f;
+
+  --color-border: #dbe3ea;
 }

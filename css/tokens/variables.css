@@ -1,6 +1,23 @@
 :root {
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --font-body: system-ui, -apple-system, sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+  --font-size-base: clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
+  --font-size-lg: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  --font-size-xl: clamp(2rem, 1.3rem + 3vw, 4rem);
+
+  --space-xs: 0.35rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: clamp(1.5rem, 1rem + 3vw, 3rem);
+  --space-xl: clamp(2rem, 1.5rem + 5vw, 5rem);
+
+  --container-width: 70rem;
+  --page-padding: clamp(1rem, 4vw, 3rem);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+
+  --shadow-card: 0 1rem 2rem rgb(15 23 42 / 0.08);
 }

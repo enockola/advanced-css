@@ -1,0 +1,41 @@
+.page {
+  width: min(100% - var(--page-padding), var(--container-width));
+  margin-inline: auto;
+}
+
+.hero {
+  padding-block: var(--space-xl);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.hero__eyebrow {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero__title {
+  max-width: 12ch;
+}
+
+.hero__text {
+  max-width: 60ch;
+  color: var(--color-muted);
+}
+
+.section {
+  padding-block: var(--space-lg);
+}
+
+.section__header {
+  margin-block-end: var(--space-md);
+}
+
+.assignment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: var(--space-md);
+}

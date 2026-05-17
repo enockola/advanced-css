@@ -1,0 +1,37 @@
+.assignment-card {
+  display: grid;
+  gap: var(--space-sm);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  text-decoration: none;
+  color: var(--color-text);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+
+  & span {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+  }
+
+  & strong {
+    font-size: var(--font-size-lg);
+    line-height: 1.2;
+  }
+
+  & p {
+    color: var(--color-muted);
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-0.25rem);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+  }
+}

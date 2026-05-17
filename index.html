@@ -3,31 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enoch Olayemi - Practice Site</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <title>Enoch Olayemi | WDD 331R Advanced CSS</title>
+    <link rel="stylesheet" href="dist/styles.css" />
   </head>
+
   <body>
-    <nav>
-      <h2>Assignments</h2>
-      <ul>
-        <li>
-          <a href="unit-1/custom-properties/index.html">
-            Custom Properties and Nesting
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-logo" href="index.html">Enoch Olayemi</a>
+
+        <ul class="site-nav__list">
+          <li><a href="#assignments">Assignments</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="page">
+      <section class="hero" id="about">
+        <p class="hero__eyebrow">WDD 331R Advanced CSS</p>
+
+        <h1 class="hero__title">Enoch Olayemi</h1>
+
+        <p class="hero__text">
+          Hi, I’m Enoch. I’m a developer who enjoys solving problems, learning
+          how systems work, and building practical projects. I’ve been growing
+          my skills in backend development, databases, and full-stack project
+          work, and I like creating things that are both functional and thoughtful.
+        </p>
+
+        <div class="hero__image-wrapper">
+          <img
+            class="hero__image"
+            src="images/enoch.jpg"
+            alt="Photo of Enoch Olayemi"
+          />
+        </div>
+        
+      </section>
+
+      <section class="section" id="assignments" aria-labelledby="assignments-title">
+        <div class="section__header">
+          <h2 id="assignments-title">Assignments</h2>
+          <p class="text-muted">
+            Here are my completed assignments and choose topic pages from the semester.
+          </p>
+        </div>
+
+        <div class="assignment-grid">
+          <a class="assignment-card" href="unit-1/custom-properties/index.html">
+            <span>Unit 1</span>
+            <strong>Custom Properties and Nesting</strong>
+            <p>
+              This assignment focused on using CSS variables and nesting to make
+              styles easier to organize and reuse.
+            </p>
           </a>
-        </li>
-        <li>
-          <a href="unit-2/layered-components/index.html">
-            Layered layered-components
+
+          <a class="assignment-card" href="unit-2/layered-components/index.html">
+            <span>Unit 2</span>
+            <strong>Layered Components</strong>
+            <p>
+              This assignment focused on organizing CSS with layers and building
+              components in a more structured way.
+            </p>
           </a>
-        </li>
-      </ul>
-    </nav>
-    <h1>Enoch Olayemi</h1>
-    <p>
-      Hi, I’m Enoch. I’m a developer who enjoys solving problems, learning how
-      systems work, and building practical projects. I’ve been growing my skills
-      in backend development, databases, and full-stack project work, and I like
-      creating things that are both functional and thoughtful.
-    </p>
+
+          <a class="assignment-card" href="unit-3/lightning-css-demo/index.html">
+            <span>Choose Topic</span>
+            <strong>Lightning CSS Setup</strong>
+            <p>
+              My teaching topic page about setting up Lightning CSS and using it
+              for nesting, prefixes, and minification.
+            </p>
+          </a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

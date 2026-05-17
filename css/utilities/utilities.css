@@ -1,0 +1,22 @@
+.flow > * + * {
+  margin-block-start: var(--space-md);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-md);
+  top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-sm);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
