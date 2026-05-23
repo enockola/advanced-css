@@ -13,3 +13,5 @@
 @import "./components/cards.css" layer(components);
 
 @import "./utilities/utilities.css" layer(utilities);
+
+@import url('components/theme-toggle.css') layer(components);
