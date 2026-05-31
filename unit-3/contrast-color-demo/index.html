@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS contrast-color() Demo</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/demo.js"></script>
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="intro">
+        <p class="eyebrow">Simple CSS Demo</p>
+        <h1>What does contrast-color() do?</h1>
+        <p>
+          It looks at one background color and chooses either
+          <strong>black</strong> or <strong>white</strong> text.
+        </p>
+      </section>
+
+      <section class="demo-panel" aria-labelledby="live-demo-title">
+        <h2 id="live-demo-title">1. Custom property demo</h2>
+        <p>
+          The card background is stored in <code>--card-bg</code>. When that
+          background changes, the text color updates too.
+        </p>
+
+        <article
+          id="live-card"
+          class="contrast-card contrast-card--large"
+          style="--card-bg: var(--color-blue); --safe-text-color: white"
+        >
+          <p class="eyebrow">Live card</p>
+          <h3 id="color-name">Blue background</h3>
+          <p>
+            My background uses <code>--card-bg</code>, and my text color uses
+            <code>contrast-color(var(--card-bg))</code>.
+          </p>
+        </article>
+
+        <div class="color-buttons" aria-label="Choose a background color">
+          <button
+            type="button"
+            data-color="var(--color-blue)"
+            data-text="white"
+          >
+            Blue
+          </button>
+
+          <button
+            type="button"
+            data-color="var(--color-yellow)"
+            data-text="black"
+          >
+            Yellow
+          </button>
+
+          <button
+            type="button"
+            data-color="var(--color-dark)"
+            data-text="white"
+          >
+            Dark
+          </button>
+
+          <button
+            type="button"
+            data-color="var(--color-midtone-green)"
+            data-text="black"
+          >
+            Mid-tone green
+          </button>
+        </div>
+      </section>
+
+      <section class="demo-panel" aria-labelledby="midtone-title">
+        <h2 id="midtone-title">2. The mid-tone problem</h2>
+        <p>
+          Mid-tone colors are not very dark or very light. The browser still
+          only gets to choose black or white, so the result can feel a little
+          harsh or awkward.
+        </p>
+
+        <div class="card-grid">
+          <article
+            class="contrast-card"
+            style="
+              --card-bg: var(--color-midtone-green);
+              --safe-text-color: black;
+            "
+          >
+            <p class="eyebrow">Mid-tone example</p>
+            <h3>Green</h3>
+            <p>
+              This is where I would tell the class: “Do not trust the function
+              blindly.”
+            </p>
+          </article>
+
+          <article
+            class="contrast-card"
+            style="--card-bg: var(--color-purple); --safe-text-color: white"
+          >
+            <p class="eyebrow">Clearer example</p>
+            <h3>Purple</h3>
+            <p>
+              Darker backgrounds usually make the black-or-white choice feel
+              more obvious.
+            </p>
+          </article>
+
+          <article
+            class="contrast-card"
+            style="--card-bg: var(--color-yellow); --safe-text-color: black"
+          >
+            <p class="eyebrow">Clearer example</p>
+            <h3>Yellow</h3>
+            <p>
+              Lighter backgrounds usually make black text the easier choice.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo-panel" aria-labelledby="fallback-title">
+        <h2 id="fallback-title">3. Fallback with @supports</h2>
+        <p>
+          The CSS starts with a simple fallback text color. Then
+          <code>@supports</code> checks if the browser understands
+          <code>contrast-color()</code>.
+        </p>
+
+        <p class="no-support-message">
+          Your browser does not support <code>contrast-color()</code>, so this
+          demo is using the fallback text colors.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
