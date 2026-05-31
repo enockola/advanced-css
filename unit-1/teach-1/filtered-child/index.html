@@ -5,9 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filtered: nth-child()</title>
     <script src="js/theme-preference.js"></script>
+    
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/dist/styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-logo" href="/index.html">Enoch Olayemi</a>
+
+        <ul class="site-nav__list">
+          <li><a href="/index.html#assignments">Assignments</a></li>
+          <li><a href="/index.html#about">About</a></li>
+        </ul>
+        <details class="theme-menu">
+          <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+          </summary>
+          <div class="theme-extra" role="group" aria-label="Choose color scheme">
+            <label class="theme-control theme-pick" data-theme-pick="light">
+              <input name="theme-preference" type="radio" value="light" />
+              <span aria-hidden="true">&#9788;&#65039;</span>
+              <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+              <input
+                name="theme-preference"
+                type="radio"
+                value="system"
+                checked
+              />
+              <span aria-hidden="true">&#9881;&#65039;</span>
+              <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+              <input name="theme-preference" type="radio" value="dark" />
+              <span aria-hidden="true">&#127766;</span>
+              <span class="visually-hidden">Dark</span>
+            </label>
+          </div>
+        </details>
+      </nav>
+    </header>
+
+
     <h1>Filtered nth-child Demo</h1>
 
     <p>Uncomment one CSS demo at a time.</p>
