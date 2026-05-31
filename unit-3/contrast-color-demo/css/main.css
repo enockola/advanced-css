@@ -1,9 +1,0 @@
-/* This file only connects the CSS files together. */
-/* Later layers can override earlier layers. */
-@layer reset, tokens, base, components, contrastColorDemo;
-
-@import url("./reset.css");
-@import url("./tokens.css");
-@import url("./base.css");
-@import url("./components.css");
-@import url("./components/contrast-card.css");

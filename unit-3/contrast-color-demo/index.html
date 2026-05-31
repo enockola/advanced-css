@@ -4,12 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS contrast-color() Demo</title>
-
-    <link rel="stylesheet" href="css/main.css" />
+    <script src="../../js/theme-preference.js"></script>
+    <link rel="stylesheet" href="../../dist/styles.css" />
     <script defer src="js/demo.js"></script>
   </head>
 
-  <body>
+  <body class="contrast-color">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-logo" href="../../index.html">Enoch Olayemi</a>
+
+        <ul class="site-nav__list">
+          <li><a href="../../index.html#assignments">Assignments</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+        </ul>
+        <details class="theme-menu">
+          <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+          </summary>
+          <div
+            class="theme-extra"
+            role="group"
+            aria-label="Choose color scheme"
+          >
+            <label class="theme-control theme-pick" data-theme-pick="light">
+              <input name="theme-preference" type="radio" value="light" />
+              <span aria-hidden="true">&#9788;&#65039;</span>
+              <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+              <input
+                name="theme-preference"
+                type="radio"
+                value="system"
+                checked
+              />
+              <span aria-hidden="true">&#9881;&#65039;</span>
+              <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+              <input name="theme-preference" type="radio" value="dark" />
+              <span aria-hidden="true">&#127766;</span>
+              <span class="visually-hidden">Dark</span>
+            </label>
+          </div>
+        </details>
+      </nav>
+    </header>
+
     <main class="page">
       <section class="intro">
         <p class="eyebrow">Simple CSS Demo</p>
@@ -30,7 +72,7 @@
         <article
           id="live-card"
           class="contrast-card contrast-card--large"
-          style="--card-bg: var(--color-blue); --safe-text-color: white"
+          style="--card-bg: var(--contrast-blue); --safe-text-color: white"
         >
           <p class="eyebrow">Live card</p>
           <h3 id="color-name">Blue background</h3>
@@ -43,7 +85,7 @@
         <div class="color-buttons" aria-label="Choose a background color">
           <button
             type="button"
-            data-color="var(--color-blue)"
+            data-color="var(--contrast-blue)"
             data-text="white"
           >
             Blue
@@ -51,7 +93,7 @@
 
           <button
             type="button"
-            data-color="var(--color-yellow)"
+            data-color="var(--contrast-yellow)"
             data-text="black"
           >
             Yellow
@@ -59,7 +101,7 @@
 
           <button
             type="button"
-            data-color="var(--color-dark)"
+            data-color="var(--contrast-dark)"
             data-text="white"
           >
             Dark
@@ -67,7 +109,7 @@
 
           <button
             type="button"
-            data-color="var(--color-midtone-green)"
+            data-color="var(--contrast-midtone-green)"
             data-text="black"
           >
             Mid-tone green
@@ -87,7 +129,7 @@
           <article
             class="contrast-card"
             style="
-              --card-bg: var(--color-midtone-green);
+              --card-bg: var(--contrast-midtone-green);
               --safe-text-color: black;
             "
           >
@@ -101,7 +143,7 @@
 
           <article
             class="contrast-card"
-            style="--card-bg: var(--color-purple); --safe-text-color: white"
+            style="--card-bg: var(--contrast-purple); --safe-text-color: white"
           >
             <p class="eyebrow">Clearer example</p>
             <h3>Purple</h3>
@@ -113,7 +155,7 @@
 
           <article
             class="contrast-card"
-            style="--card-bg: var(--color-yellow); --safe-text-color: black"
+            style="--card-bg: var(--contrast-yellow); --safe-text-color: black"
           >
             <p class="eyebrow">Clearer example</p>
             <h3>Yellow</h3>
