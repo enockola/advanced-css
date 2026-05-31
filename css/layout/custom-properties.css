@@ -1,113 +1,117 @@
+.custom-properties{
 
-/* ========================================
-   CARD GROUP
-   ======================================== */
-.card-group {
-  margin-bottom: var(--spacing-xl);
+  /* ========================================
+    CARD GROUP
+    ======================================== */
+  .card-group {
+    margin-bottom: var(--spacing-xl);
 
-  h2 {
-    font-size: var(--font-size-lg);
-    font-family: var(--font-family-sans);
-    color: var(--color-accent);
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
-    border-bottom: 2px solid var(--color-border-strong);
-    padding-bottom: var(--spacing-sm);
+    h2 {
+      font-size: var(--font-size-lg);
+      font-family: var(--font-family-sans);
+      color: var(--color-accent);
+      margin-top: var(--spacing-lg);
+      margin-bottom: var(--spacing-md);
+      border-bottom: 2px solid var(--color-border-strong);
+      padding-bottom: var(--spacing-sm);
+    }
+    
+      a {
+          color: var(--color-link);
+          background: var(--color-surface);
+          padding: var(--spacing-xs) var(--spacing-sm);
+          border-radius: var(--radius-sm);
+          text-decoration: none;
+          transition: var(--transition-base);
+
+          &:hover {
+              color: var(--color-link-hover);
+              background: var(--accent-200);
+          }
+      }
   }
-  
-    a {
-        color: var(--color-link);
-        background: var(--color-surface);
-        padding: var(--spacing-xs) var(--spacing-sm);
-        border-radius: var(--radius-sm);
-        text-decoration: none;
-        transition: var(--transition-base);
+
+  /* ========================================
+    CARDS GRID
+    ======================================== */
+  .cards {
+    display: grid;
+    gap: calc(var(--spacing-md) + var(--spacing-sm));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* ========================================
+    INDIVIDUAL CARD
+    ======================================== */
+  .card {
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    .card-tag {
+      align-self: flex-start;
+      font-size: var(--font-size-sm);
+      font-family: var(--font-family-sans);
+      font-weight: bold;
+      padding: var(--spacing-xs) var(--spacing-sm);
+      background: var(--accent-200);
+      color: var(--color-accent);
+      border-radius: var(--radius-sm);
+    }
+
+    h3 {
+      font-size: var(--font-size-md);
+      color: var(--color-text);
+    }
+
+    p {
+      font-size: var(--font-size-md);
+      color: var(--color-text-muted);
+    }
+
+    .card-meta {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--spacing-md);
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--spacing-sm);
+      font-family: var(--font-family-sans);
+
+      span {
+        font-size: var(--font-size-sm);
+        color: var(--color-text-muted);
+        font-weight: bold;
+      }
+
+      a {
+        color: var(--header-text);
+        background: var(--color-accent);
 
         &:hover {
-            color: var(--color-link-hover);
-            background: var(--accent-200);
+          color: var(--header-text);
+          background: var(--color-accent-hover);
         }
-    }
-}
-
-/* ========================================
-   CARDS GRID
-   ======================================== */
-.cards {
-  display: grid;
-  gap: calc(var(--spacing-md) + var(--spacing-sm));
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* ========================================
-   INDIVIDUAL CARD
-   ======================================== */
-.card {
-  background: var(--color-surface);
-  color: var(--color-text);
-  padding: var(--spacing-lg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-
-  .card-tag {
-    align-self: flex-start;
-    font-size: var(--font-size-sm);
-    font-family: var(--font-family-sans);
-    font-weight: bold;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background: var(--accent-200);
-    color: var(--color-accent);
-    border-radius: var(--radius-sm);
-  }
-
-  h3 {
-    font-size: var(--font-size-md);
-    color: var(--color-text);
-  }
-
-  p {
-    font-size: var(--font-size-md);
-    color: var(--color-text-muted);
-  }
-
-  .card-meta {
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-md);
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--spacing-sm);
-    font-family: var(--font-family-sans);
-
-    span {
-      font-size: var(--font-size-sm);
-      color: var(--color-text-muted);
-      font-weight: bold;
-    }
-
-    a {
-      color: var(--header-text);
-      background: var(--color-accent);
-
-      &:hover {
-        color: var(--header-text);
-        background: var(--color-accent-hover);
       }
     }
   }
-}
 
-/* ========================================
-   FOOTER
-   ======================================== */
-.board-footer {
-  text-align: center;
-  padding: var(--spacing-lg);
-  color: var(--color-text-muted);
-  border-top: 2px solid var(--color-border);
+  /* ========================================
+    FOOTER
+    ======================================== */
+  .board-footer {
+    text-align: center;
+    padding: var(--spacing-lg);
+    color: var(--color-text-muted);
+    border-top: 2px solid var(--color-border);
+  }
+
+    
 }

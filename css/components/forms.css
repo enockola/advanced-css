@@ -1,0 +1,37 @@
+form {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+:is(input, textarea, select) {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-md);
+
+  color: var(--color-text);
+  background-color: var(--color-surface);
+
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base);
+}
+
+:is(input, textarea, select):focus-visible {
+  outline: var(--outline-width) solid var(--color-accent);
+  outline-offset: 3px;
+  border-color: var(--color-accent);
+}
+
+textarea {
+  min-height: calc(var(--spacing-lg) * 4);
+  resize: vertical;
+}

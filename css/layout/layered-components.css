@@ -1,0 +1,133 @@
+.layered-components-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+
+  .quick-link {
+    padding: var(--spacing-md);
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      color: var(--color-text);
+      text-decoration: none;
+      transition: color var(--transition-base);
+
+      &:hover:not([aria-current="page"]) {
+        color: var(--accent-200);
+      }
+
+      &:focus-visible {
+        outline: var(--outline-width) solid var(--accent-200);
+        outline-offset: 3px;
+      }
+
+      &[aria-current="page"] {
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  main {
+    flex: 1;
+    width: min(100% - calc(var(--spacing-md) * 2), 64rem);
+    margin-inline: auto;
+    padding-block: var(--spacing-lg);
+  }
+
+  main > section {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  section {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .page-header {
+    max-width: 64rem;
+    width: 100%;
+    margin-inline: auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .page-footer {
+    max-width: 64rem;
+    width: 100%;
+    margin-inline: auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+    color: var(--color-text-muted);
+  }
+
+  .hero {
+    display: grid;
+    gap: var(--spacing-md);
+    padding: clamp(var(--spacing-md), 4vw, var(--spacing-lg));
+    border-radius: var(--radius-md);
+    background-color: var(--color-accent);
+    color: var(--header-text);
+    box-shadow: var(--shadow-md);
+
+    :where(h1, p) {
+      margin: 0;
+    }
+
+    a {
+      color: var(--header-text);
+
+      &:hover {
+        color: var(--accent-200);
+      }
+
+      &:focus-visible {
+        outline: var(--outline-width) solid var(--accent-200);
+        outline-offset: 3px;
+      }
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: clamp(var(--spacing-md), 3vw, var(--spacing-lg));
+  }
+
+  .card {
+    padding: clamp(var(--spacing-md), 2vw, var(--spacing-lg));
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+
+    h2,
+    h3 {
+      margin-top: 0;
+      color: var(--color-text);
+    }
+
+    p {
+      color: var(--color-text-muted);
+    }
+
+    a {
+      color: var(--color-link);
+
+      &:hover {
+        color: var(--color-link-hover);
+      }
+
+      &:focus-visible {
+        outline: var(--outline-width) solid var(--color-accent);
+        outline-offset: 3px;
+      }
+    }
+  }
+}

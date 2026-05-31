@@ -8,12 +8,15 @@
 @import "./base/elements.css" layer(base);
 
 @import "./layout/home.css" layer(layout);
+@import "./layout/custom-properties.css" layer(layout);
+@import "./layout/layered-components.css" layer(layout);
+@import "./layout/lightning-css.css" layer(layout);
 
 @import "./components/nav.css" layer(components);
 @import "./components/cards.css" layer(components);
+@import "./components/forms.css" layer(components);
+@import "./components/buttons.css" layer(components);
+@import url('components/theme-toggle.css') layer(components);
 
 @import "./utilities/utilities.css" layer(utilities);
 
-@import "./layout/custom-properties.css" layer(layout);
-
-@import url('components/theme-toggle.css') layer(components);

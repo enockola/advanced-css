@@ -5,25 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scripture Study Companion</title>
     <script src="js/theme-preference.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/dist/styles.css">
 </head>
-<body>
-    <nav class="site-nav">
-        <a href="../../index.html">&larr; Home</a>
-        <ul>
-            <li><a href="#" aria-current="page">Study</a></li>
-            <li><a href="#">Bookmarks</a></li>
-            <li><a href="#">Journal</a></li>
-            <li><a href="#">Temples</a></li>
-        </ul>
-    </nav>
+<body class="layered-components-page">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-logo" href="../../index.html">Enoch Olayemi</a>
 
+        <ul class="site-nav__list">
+          <li><a href="../../index.html#assignments">Assignments</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+        </ul>
+        <details class="theme-menu">
+          <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+          </summary>
+          <div class="theme-extra" role="group" aria-label="Choose color scheme">
+            <label class="theme-control theme-pick" data-theme-pick="light">
+              <input name="theme-preference" type="radio" value="light" />
+              <span aria-hidden="true">&#9788;&#65039;</span>
+              <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+              <input
+                name="theme-preference"
+                type="radio"
+                value="system"
+                checked
+              />
+              <span aria-hidden="true">&#9881;&#65039;</span>
+              <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+              <input name="theme-preference" type="radio" value="dark" />
+              <span aria-hidden="true">&#127766;</span>
+              <span class="visually-hidden">Dark</span>
+            </label>
+          </div>
+        </details>
+      </nav>
+    </header>
+    
     <header class="page-header">
+        <div class="quick-link">
+            <a href="../../index.html">&larr; Home</a>
+            <ul>
+                <li><a href="#" aria-current="page">Study</a></li>
+                <li><a href="#">Bookmarks</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Temples</a></li>
+            </ul>
+        </div>
         <h1>Scripture Study Companion</h1>
         <p>Explore topics, save insights, and deepen your understanding of the gospel of Jesus Christ.</p>
     </header>
 
-    <main>
+    <main id="main" class="page">
         <section class="card-group">
             <h2>Study Topics</h2>
             <div class="cards">
