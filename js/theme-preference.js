@@ -1,57 +1,56 @@
 /**
- * Theme preference: restore on load (before paint) and persist on change.
+ * Theme preference: restore on load and persist on change.
  * Load in <head> WITHOUT defer or async.
  */
 (() => {
-    const ALLOWED = new Set(['light', 'system', 'dark']);
-    const id = 'theme-preference-sync';
+  const STORAGE_KEY = "theme-preference";
+  const ALLOWED = new Set(["light", "system", "dark"]);
 
-    let container = document.getElementById(id);
-    if (!container) {
-        container = document.createElement('div');
-        container.id = id;
-        container.hidden = true;
-        container.setAttribute('aria-hidden', 'true');
-
-        ['light', 'system', 'dark'].forEach((v) => {
-            const input = document.createElement('input');
-            input.type = 'radio';
-            input.name = 'theme-preference';
-            input.value = v;
-            if (v === 'system') {
-                input.checked = true;
-            }
-            container.appendChild(input);
-        });
-
-        const mount = document.body ?? document.head;
-        if (mount) {
-            mount.appendChild(container);
-        }
-    }
-
-    let stored = null;
+  function getStoredPreference() {
     try {
-        stored = localStorage.getItem('theme-preference');
+      const stored = localStorage.getItem(STORAGE_KEY);
+      return ALLOWED.has(stored) ? stored : "system";
     } catch {
-        /* storage may be disabled */
+      return "system";
     }
+  }
 
-    const value = ALLOWED.has(stored) ? stored : 'system';
-    const input = container.querySelector(
-        'input[value="' + value + '"]'
-    );
-    if (input) {
-        input.checked = true;
+  function savePreference(value) {
+    try {
+      localStorage.setItem(STORAGE_KEY, value);
+    } catch {
+      /* storage may be disabled */
     }
+  }
 
-    document.addEventListener('change', (e) => {
-        if (e.target.name === 'theme-preference') {
-            try {
-                localStorage.setItem('theme-preference', e.target.value);
-            } catch {
-                /* storage may be disabled */
-            }
-        }
+  function applyPreference(value) {
+    document.documentElement.dataset.theme = value;
+  }
+
+  const currentPreference = getStoredPreference();
+  applyPreference(currentPreference);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const inputs = document.querySelectorAll('input[name="theme-preference"]');
+
+    inputs.forEach((input) => {
+      input.checked = input.value === currentPreference;
     });
+  });
+
+  document.addEventListener("change", (event) => {
+    const target = event.target;
+
+    if (
+      target.matches &&
+      target.matches('input[name="theme-preference"]')
+    ) {
+      const value = target.value;
+
+      if (!ALLOWED.has(value)) return;
+
+      savePreference(value);
+      applyPreference(value);
+    }
+  });
 })();

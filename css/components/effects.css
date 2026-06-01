@@ -1,3 +1,13 @@
+.hero--portrait {
+  --hero-height: clamp(28rem, 85svh, 44rem);
+  --hero-content-width: 38rem;
+}
+
+.hero--portrait .hero-image {
+  object-fit: cover;
+  object-position: center top;
+}
+
 .hero {
   position: relative;
   display: grid;
