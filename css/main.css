@@ -12,6 +12,7 @@
 @import "./layout/layered-components.css" layer(layout);
 @import "./layout/lightning-css.css" layer(layout);
 @import "./layout/contrast-color.css" layer(components);
+@import "./layout/clip-mask.css" layer(layout);
 
 @import "./components/nav.css" layer(components);
 @import "./components/cards.css" layer(components);

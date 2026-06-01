@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../js/theme-preference.js"></script>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <title>Clip Mask Demo</title>
+  </head>
+  <body>
+        <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-logo" href="../../index.html">Enoch Olayemi</a>
+
+        <ul class="site-nav__list">
+          <li><a href="../../index.html#assignments">Assignments</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+        </ul>
+        <details class="theme-menu">
+          <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+          </summary>
+          <div
+            class="theme-extra"
+            role="group"
+            aria-label="Choose color scheme"
+          >
+            <label class="theme-control theme-pick" data-theme-pick="light">
+              <input name="theme-preference" type="radio" value="light" />
+              <span aria-hidden="true">&#9788;&#65039;</span>
+              <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+              <input
+                name="theme-preference"
+                type="radio"
+                value="system"
+                checked
+              />
+              <span aria-hidden="true">&#9881;&#65039;</span>
+              <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+              <input name="theme-preference" type="radio" value="dark" />
+              <span aria-hidden="true">&#127766;</span>
+              <span class="visually-hidden">Dark</span>
+            </label>
+          </div>
+        </details>
+      </nav>
+    </header>
+
+    <nav class="site-nav">
+      <a href="../../index.html">&larr; Home</a>
+    </nav>
+
+    <main class="clip-mask-page page">
+      <section class="clip-mask-hero">
+        <p class="clip-mask-hero__eyebrow">Advanced CSS Demo</p>
+        <h1>Clip Path and Mask Image</h1>
+        <p>
+          Both properties hide parts of an element, but they do it in different
+          ways. Clip paths create hard geometric edges, while masks create soft
+          transparency.
+        </p>
+      </section>
+
+      <section class="demo-panel" id="clip-path-demo">
+        <div class="demo-panel__header">
+          <p class="eyebrow">Demo 1</p>
+          <h2>Clip Path Shapes</h2>
+          <p>
+            Click each button to change the visible shape of the same image.
+          </p>
+        </div>
+
+        <div class="shape-controls" aria-label="Clip path shape controls">
+          <button type="button" data-shape="circle(42%)" aria-pressed="true">
+            circle()
+          </button>
+
+          <button type="button" data-shape="ellipse(50% 35% at center)">
+            ellipse()
+          </button>
+
+          <button type="button" data-shape="inset(10% round 1rem)">
+            inset()
+          </button>
+
+          <button
+            type="button"
+            data-shape="polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+          >
+            polygon()
+          </button>
+        </div>
+
+        <figure class="clip-demo">
+          <img
+            id="clip-sample"
+            class="clip-demo__image"
+            src="https://images.pexels.com/photos/32430539/pexels-photo-32430539.jpeg"
+            alt="Sample photo for clip path demo"
+          />
+
+          <figcaption>
+            <code id="clip-code">clip-path: circle(42%);</code>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="demo-panel" id="clip-transition-demo">
+        <div class="demo-panel__header">
+          <p class="eyebrow">Demo 2</p>
+          <h2>Clip Path Transition</h2>
+          <p>
+            Hover over the image. The polygon animates because both shapes use
+            polygon() with the same number of points.
+          </p>
+        </div>
+
+        <figure class="morph-demo">
+          <img
+            class="morph-demo__image"
+            src="https://images.pexels.com/photos/34586073/pexels-photo-34586073.jpeg"
+            alt="Sample photo showing a clip path transition"
+          />
+
+          <figcaption>
+            <code>transition: clip-path 0.5s ease;</code>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="demo-panel" id="mask-image-demo">
+        <div class="demo-panel__header">
+          <p class="eyebrow">Demo 3</p>
+          <h2>Gradient Mask Fade</h2>
+          <p>
+            This image uses a gradient mask so the bottom edge fades out instead
+            of ending with a hard cut.
+          </p>
+        </div>
+
+        <figure class="mask-demo">
+          <img
+            class="mask-demo__image"
+            src="https://images.pexels.com/photos/27792840/pexels-photo-27792840.png"
+            alt="Sample landscape photo with a gradient mask fade"
+          />
+
+          <figcaption>
+            <code>
+              mask-image: linear-gradient(to bottom, black 55%, transparent
+              100%);
+            </code>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="comparison-panel">
+        <h2>When to Use Which</h2>
+
+        <div class="comparison-grid">
+          <article>
+            <h3>Use clip-path when...</h3>
+            <p>
+              You need hard geometric shapes, angled sections, circles,
+              diamonds, or polygon-based hover effects.
+            </p>
+          </article>
+
+          <article>
+            <h3>Use mask-image when...</h3>
+            <p>
+              You need soft fades, gradual transparency, vignettes, or
+              image-based reveal effects.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/clip-mask-demo.js"></script>
+  </body>
+</html>
