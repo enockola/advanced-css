@@ -1,0 +1,45 @@
+.demo {
+    margin-block: 2rem;
+    padding: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    background: white;
+    overflow-x: auto;
+}
+
+.data-grid {
+    display: grid;
+    gap: 0.5rem;
+    margin-block-start: 1rem;
+}
+
+.data-grid > * {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background: #e2e8f0;
+}
+
+.label {
+    background: #bfdbfe;
+    font-weight: 700;
+}
+
+/* Demo 1: min-content */
+.demo-min .data-grid {
+    grid-template-columns: min-content 1fr;
+}
+
+/* Demo 2: max-content */
+.demo-max .data-grid {
+    grid-template-columns: max-content 1fr;
+}
+
+/* Demo 3: fit-content(16rem) */
+.demo-fit .data-grid {
+    grid-template-columns: fit-content(10rem) 1fr;
+}
+
+/* Demo 4: minmax using intrinsic sizing */
+.demo-minmax .data-grid {
+    grid-template-columns: minmax(min-content, 1fr) 1fr;
+}
