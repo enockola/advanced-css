@@ -5,6 +5,8 @@
 **Course:** WDD 331R Advanced CSS  
 **Live Site:** [Visit Site](https://enockola.github.io/advanced-css/)
 
+Recent assignment pages are [Editorial Layout](https://enockola.github.io/advanced-css/unit-4/grid-layouts/editorial.html), and [Card Layout](https://enockola.github.io/advanced-css/unit-4/grid-layouts/cards.html)
+
 ## About
 
 This repository is my Practice Site for WDD 331R: Advanced CSS. Each week I add new pages, assignments, and styles as I work through the course.
