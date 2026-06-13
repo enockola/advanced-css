@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intrinsic Sizing Demo</title>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <link rel="stylesheet" href="intrinsic-sizing.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>Intrinsic Sizing Keywords</h1>
+
+      <section class="demo demo-min">
+        <h2>1. min-content</h2>
+        <p>
+          The first column becomes as narrow as it can while still respecting
+          the longest unbreakable word.
+        </p>
+
+        <div class="data-grid">
+          <div class="label">Name</div>
+          <div>Alex Chen</div>
+
+          <div class="label">Phone Number</div>
+          <div>555-123-4567</div>
+
+          <div class="label">Qty</div>
+          <div>2</div>
+        </div>
+      </section>
+
+      <section class="demo demo-max">
+        <h2>2. max-content</h2>
+        <p>
+          The first column grows wide enough to keep the longest label on one
+          line.
+        </p>
+
+        <div class="data-grid">
+          <div class="label">Done</div>
+          <div>Publish unit index</div>
+
+          <div class="label">Awaiting Final Sign-Off</div>
+          <div>Review grid prove rubric</div>
+
+          <div class="label">Draft</div>
+          <div>Update color token sheet</div>
+        </div>
+      </section>
+
+      <section class="demo demo-fit">
+        <h2>3. fit-content()</h2>
+        <p>
+          The first column grows with the content, but stops at the cap and
+          wraps.
+        </p>
+
+        <div class="data-grid">
+          <div class="label">Grid</div>
+          <div>Short tag, column hugs content.</div>
+
+          <div class="label">Flexbox</div>
+          <div>Medium tag, still under the cap.</div>
+
+          <div class="label">Intrinsic Sizing Keywords</div>
+          <div>Long tag wraps once it reaches the cap.</div>
+        </div>
+      </section>
+
+      <section class="demo demo-minmax">
+        <h2>4. Intrinsic sizing inside minmax()</h2>
+        <p>
+          This column can grow, but it will not shrink below its content-based
+          minimum.
+        </p>
+
+        <div class="data-grid">
+          <div class="label">Internationalization</div>
+          <div>This label creates the minimum safe size.</div>
+
+          <div class="label">CSS</div>
+          <div>The second column gets the remaining space.</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
