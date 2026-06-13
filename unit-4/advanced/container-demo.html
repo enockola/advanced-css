@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Query Demo</title>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <link rel="stylesheet" href="container-demo.css">
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <h1>Container Query Demo</h1>
+            <p>The same component changes based on the size of its container, not the viewport.</p>
+        </header>
+
+        <section class="layout-demo">
+            <aside class="sidebar-placement component-container">
+                <article class="feature-card">
+                    <img src="../../images/imageplaceholder.png" alt="Placeholder image">
+                    <div>
+                        <h2>Sidebar Feature</h2>
+                        <p>This version stays stacked because its container is narrow.</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
+            </aside>
+
+            <section class="main-placement component-container">
+                <article class="feature-card">
+                    <img src="../../images/imageplaceholder.png" alt="Placeholder image">
+                    <div>
+                        <h2>Main Content Feature</h2>
+                        <p>This same component becomes horizontal because its container has more room.</p>
+                        <a href="#">Read more</a>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

@@ -5,7 +5,7 @@
 **Course:** WDD 331R Advanced CSS  
 **Live Site:** [Visit Site](https://enockola.github.io/advanced-css/)
 
-Recent assignment pages are [Editorial Layout](https://enockola.github.io/advanced-css/unit-4/grid-layouts/editorial.html), and [Card Layout](https://enockola.github.io/advanced-css/unit-4/grid-layouts/cards.html)
+Recent assignment pages are [Container Queries Demo](https://enockola.github.io/advanced-css/unit-4/advanced/container-demo.html), and [Sticky](https://enockola.github.io/advanced-css/unit-4/advanced/sticky-demo.html)
 
 ## About
 

@@ -7,13 +7,15 @@
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     gap: var(--space-lg);
     margin-top: var(--space-md);
+    align-items: stretch;
 }
 
+/* Fallback layout for browsers without subgrid */
 .articles-page .card {
     display: grid;
     grid-template-rows: auto 1fr;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: stretch;
 }
 
 .articles-page .card > div:first-child {
@@ -31,4 +33,64 @@
 .articles-page .card a {
     align-self: end;
     inline-size: max-content;
+}
+
+/* Enhanced layout when subgrid is supported */
+@supports (grid-template-rows: subgrid) {
+    .articles-page .card-grid {
+        /*
+            Shared row tracks:
+            1. image
+            2. title
+            3. body
+            4. footer/button
+
+            The assignment focuses on title/body/footer,
+            but this page also has a fixed image area.
+        */
+        grid-auto-rows: 12rem max-content minmax(0, 1fr) max-content;
+        align-items: stretch;
+    }
+
+    .articles-page .card {
+        display: grid;
+        grid-row: span 4;
+        grid-template-rows: subgrid;
+        align-items: stretch;
+    }
+
+    .articles-page .card > div:first-child {
+        grid-row: 1;
+        block-size: auto;
+    }
+
+    /*
+        This removes the extra wrapper from layout participation
+        so the title, body, and link can align directly to the
+        shared subgrid rows.
+    */
+    .articles-page .card > div:last-child {
+        display: contents;
+    }
+
+    .articles-page .card > div:last-child > :is(h1, h2, h3) {
+        grid-row: 2;
+        margin: 0;
+        padding-inline: var(--space-md);
+        padding-block-start: var(--space-md);
+    }
+
+    .articles-page .card > div:last-child > p {
+        grid-row: 3;
+        margin: 0;
+        padding-inline: var(--space-md);
+    }
+
+    .articles-page .card > div:last-child > a {
+        grid-row: 4;
+        align-self: end;
+        inline-size: max-content;
+        margin-inline: var(--space-md);
+        margin-block-end: var(--space-md);
+    }
 }
