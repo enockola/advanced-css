@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snap Carousel Demo</title>
+    <script src="../../js/theme-preference.js"></script>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <link rel="stylesheet" href="./snap-carousel.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-logo" href="../../index.html">Enoch Olayemi</a>
+
+        <ul class="site-nav__list">
+          <li><a href="../../index.html#assignments">Assignments</a></li>
+          <li><a href="../../index.html#about">About</a></li>
+        </ul>
+        <details class="theme-menu">
+          <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+          </summary>
+          <div
+            class="theme-extra"
+            role="group"
+            aria-label="Choose color scheme"
+          >
+            <label class="theme-control theme-pick" data-theme-pick="light">
+              <input name="theme-preference" type="radio" value="light" />
+              <span aria-hidden="true">&#9788;&#65039;</span>
+              <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+              <input
+                name="theme-preference"
+                type="radio"
+                value="system"
+                checked
+              />
+              <span aria-hidden="true">&#9881;&#65039;</span>
+              <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+              <input name="theme-preference" type="radio" value="dark" />
+              <span aria-hidden="true">&#127766;</span>
+              <span class="visually-hidden">Dark</span>
+            </label>
+          </div>
+        </details>
+      </nav>
+    </header>
+
+    <main class="page">
+      <header class="page-header">
+        <h1>CSS Scroll Snap Carousel</h1>
+        <p>
+          This carousel uses CSS scroll snap instead of JavaScript. It scrolls
+          horizontally, snaps one card at a time, and works with touch and
+          keyboard.
+        </p>
+      </header>
+
+      <section class="snap-carousel-section" aria-labelledby="carousel-heading">
+        <header>
+          <h2 id="carousel-heading">Featured Practice Topics</h2>
+          <p>
+            Use touch, trackpad, mouse, or keyboard to move through the cards.
+          </p>
+        </header>
+
+        <div
+          class="snap-carousel"
+          tabindex="0"
+          aria-label="Featured practice topics carousel"
+        >
+          <article class="snap-carousel-card">
+            <img src="../../images/imageplaceholder.png" alt="" />
+            <h3>Subgrid Layouts</h3>
+            <p>
+              Use subgrid to align card titles, body text, and buttons across a
+              row.
+            </p>
+            <a href="#">Read more</a>
+          </article>
+
+          <article class="snap-carousel-card">
+            <img src="../../images/imageplaceholder.png" alt="" />
+            <h3>Container Queries</h3>
+            <p>
+              Let components respond to the space they have instead of the full
+              viewport.
+            </p>
+            <a href="#">Read more</a>
+          </article>
+
+          <article class="snap-carousel-card">
+            <img src="../../images/imageplaceholder.png" alt="" />
+            <h3>Sticky Modules</h3>
+            <p>
+              Build sticky sidebars or headers while avoiding overflow bugs.
+            </p>
+            <a href="#">Read more</a>
+          </article>
+
+          <article class="snap-carousel-card">
+            <img src="../../images/imageplaceholder.png" alt="" />
+            <h3>Scroll Snap</h3>
+            <p>
+              Create native-feeling carousels with CSS instead of JavaScript.
+            </p>
+            <a href="#">Read more</a>
+          </article>
+
+          <article class="snap-carousel-card">
+            <img src="../../images/imageplaceholder.png" alt="" />
+            <h3>Advanced CSS Patterns</h3>
+            <p>
+              Practice reusable layout patterns that work across multiple pages.
+            </p>
+            <a href="#">Read more</a>
+          </article>
+
+          <article class="snap-carousel-card">
+            <img src="../../images/imageplaceholder.png" alt="" />
+            <h3>Random Topic</h3>
+            <p>
+              This is a random topic to show that the carousel can hold any
+              content, not just the ones listed above.
+            </p>
+            <a href="#">Read more</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

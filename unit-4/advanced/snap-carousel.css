@@ -1,0 +1,67 @@
+.snap-carousel {
+    scroll-snap-type: x proximity;
+
+    display: flex;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+}
+
+.snap-carousel-card {
+    scroll-snap-align: end;
+    
+    scroll-snap-stop: always;
+    
+    flex: 0 0 clamp(320px, 85vw, 520px);
+    /* flex: 0 0 clamp(260px, 85vw, 320px); */
+
+    display: grid;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    border: 3px solid var(--card-accent);
+    background: var(--card-bg);
+}
+
+.snap-carousel-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: calc(var(--radius-md) * 0.75);
+}
+
+
+/* Accent colors for each card */
+.snap-carousel-card:nth-child(1) {
+  --card-accent: #2563eb;
+  --card-bg: #dbeafe;
+}
+
+.snap-carousel-card:nth-child(2) {
+  --card-accent: #16a34a;
+  --card-bg: #dcfce7;
+}
+
+.snap-carousel-card:nth-child(3) {
+  --card-accent: #ea580c;
+  --card-bg: #ffedd5;
+}
+
+.snap-carousel-card:nth-child(4) {
+  --card-accent: #9333ea;
+  --card-bg: #f3e8ff;
+}
+
+.snap-carousel-card:nth-child(5) {
+  --card-accent: #dc2626;
+  --card-bg: #fee2e2;
+}
+
+.snap-carousel-card:nth-child(6) {
+  --card-accent: #0891b2;
+  --card-bg: #cffafe;
+}
