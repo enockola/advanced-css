@@ -1,12 +1,59 @@
 :root {
   /* Typography */
-  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-family-custom:
+    "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
   --font-family-mono: monospace;
 
-  --font-size-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
-  --font-size-md: clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
-  --font-size-lg: clamp(1.25rem, 1rem + 1vw, 1.75rem);
-  --font-size-xl: clamp(2rem, 1.3rem + 3vw, 4rem);
+  /* Semantic font-family roles */
+  --font-family-heading: var(--font-family-custom);
+  --font-family-body: var(--font-family-sans);
+  --font-family-code: var(--font-family-mono);
+
+  --font-size-xs: 0.694rem;
+  --font-size-sm: 0.833rem;
+  --font-size-md: clamp(1rem, calc(0.9545rem + 0.2273vw), 1.125rem);
+  --font-size-lg: clamp(1.2rem, calc(1.1455rem + 0.2727vw), 1.35rem);
+  --font-size-xl: clamp(1.44rem, calc(1.3745rem + 0.3273vw), 1.62rem);
+  --font-size-2xl: clamp(1.728rem, calc(1.6495rem + 0.3927vw), 1.944rem);
+  --font-size-3xl: clamp(2.074rem, calc(1.9798rem + 0.4709vw), 2.333rem);
+  --font-size-4xl: clamp(2.488rem, calc(2.3745rem + 0.5673vw), 2.8rem);
+
+  /* line heights */
+  --line-height-xs: 1.4;
+  --line-height-sm: 1.5;
+  --line-height-md: 1.6;
+  --line-height-lg: 1.4;
+  --line-height-xl: 1.3;
+  --line-height-2xl: 1.2;
+  --line-height-3xl: 1.15;
+  --line-height-4xl: 1.1;
+
+  /* Semantic font-size roles */
+  --font-size-overline: var(--font-size-xs);
+  --font-size-caption: var(--font-size-sm);
+  --font-size-body-sm: var(--font-size-sm);
+  --font-size-body: var(--font-size-md);
+  --font-size-body-lg: var(--font-size-lg);
+  --font-size-heading-sm: var(--font-size-xl);
+  --font-size-heading-md: var(--font-size-2xl);
+  --font-size-heading-lg: var(--font-size-3xl);
+  --font-size-display: var(--font-size-4xl);
+
+  /* Semantic line-height roles */
+  --line-height-overline: var(--line-height-xs);
+  --line-height-caption: var(--line-height-sm);
+  --line-height-body-sm: var(--line-height-sm);
+  --line-height-body: var(--line-height-md);
+  --line-height-body-lg: var(--line-height-lg);
+  --line-height-heading-sm: var(--line-height-xl);
+  --line-height-heading-md: var(--line-height-2xl);
+  --line-height-heading-lg: var(--line-height-3xl);
+  --line-height-display: var(--line-height-4xl);
 
   /* Spacing */
   --spacing-xs: 0.35rem;
@@ -26,19 +73,15 @@
 
   /* Shadows */
   --shadow-color: light-dark(rgb(15 23 42 / 0.08), rgb(0 0 0 / 0.35));
-  --shadow-sm:
-      0 1px 2px oklch(0.2 0 0 / 0.1),
-      0 2px 4px oklch(0.2 0 0 / 0.06);
-  
+  --shadow-sm: 0 1px 2px oklch(0.2 0 0 / 0.1), 0 2px 4px oklch(0.2 0 0 / 0.06);
+
   --shadow-md:
-      0 2px 4px oklch(0.2 0 0 / 0.1),
-      0 6px 12px oklch(0.2 0 0 / 0.07),
-      0 16px 32px oklch(0.2 0 0 / 0.05);
+    0 2px 4px oklch(0.2 0 0 / 0.1), 0 6px 12px oklch(0.2 0 0 / 0.07),
+    0 16px 32px oklch(0.2 0 0 / 0.05);
 
   --shadow-lg:
-      0 4px 8px oklch(0.2 0 0 / 0.1),
-      0 12px 24px oklch(0.2 0 0 / 0.08),
-      0 24px 48px oklch(0.2 0 0 / 0.06);
+    0 4px 8px oklch(0.2 0 0 / 0.1), 0 12px 24px oklch(0.2 0 0 / 0.08),
+    0 24px 48px oklch(0.2 0 0 / 0.06);
 
   --shadow-card: var(--shadow-md);
 
@@ -53,7 +96,7 @@
   --outline-width: 2px;
 
   /* Legacy names for backwards compatibility */
-  --font-body: var(--font-family-sans);
+  --font-body: var(--font-family-body);
 
   --font-size-base: var(--font-size-md);
 
