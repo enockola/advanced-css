@@ -12,12 +12,12 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-
+  
   .header__title {
     max-width: 12ch;
     color: var(--color-text);
-    font-size: var(--font-size-xl);
-    line-height: 1;
+    font-size: var(--font-size-display);
+    line-height: var(--line-height-display);
   }
 
   .header__text {
