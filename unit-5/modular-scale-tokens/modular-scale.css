@@ -1,0 +1,189 @@
+@property --ratio {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 1.25;
+}
+
+.scale-demo {
+  /*
+   * Change only these two inputs.
+   * The rest of the scale is calculated from them.
+   */
+  --ratio: 1.25;
+  --base: clamp(1rem, calc(0.9545rem + 0.2273vw), 1.125rem);
+
+  /* Steps below the base */
+  --step-n2: calc(var(--base) * pow(var(--ratio), -2));
+  --step-n1: calc(var(--base) * pow(var(--ratio), -1));
+
+  /* Base and steps above it */
+  --step-0: var(--base);
+  --step-1: calc(var(--base) * pow(var(--ratio), 1));
+  --step-2: calc(var(--base) * pow(var(--ratio), 2));
+
+  /*
+   * This step demonstrates round().
+   * It snaps the computed result to the nearest pixel.
+   */
+  --step-3-raw: calc(var(--base) * pow(var(--ratio), 3));
+  --step-3: round(nearest, var(--step-3-raw), 1px);
+
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+  padding-block: 3rem;
+
+  transition: --ratio 250ms ease;
+}
+
+.demo-header {
+  max-width: 65ch;
+  margin-block-end: 3rem;
+}
+
+.demo-header h1 {
+  font-size: var(--step-3);
+  line-height: 1.05;
+  margin-block: 0.25lh;
+}
+
+.demo-header p {
+  font-size: var(--step-0);
+  line-height: 1.6;
+}
+
+.eyebrow,
+.comparison-label {
+  font-size: var(--step-n1);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.demo-section {
+  margin-block: 3rem;
+}
+
+.demo-section > h2 {
+  font-size: var(--step-2);
+  line-height: 1.15;
+  margin-block-end: 0.75lh;
+}
+
+#ratio {
+  display: block;
+  width: min(100%, 35rem);
+  margin-block: 1rem;
+}
+
+.demo-note {
+  max-width: 60ch;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-block-end: 1px solid currentColor;
+}
+
+.scale-sample {
+  display: inline-block;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.step-n2 {
+  font-size: var(--step-n2);
+}
+
+.step-n1 {
+  font-size: var(--step-n1);
+}
+
+.step-0 {
+  font-size: var(--step-0);
+}
+
+.step-1 {
+  font-size: var(--step-1);
+}
+
+.step-2 {
+  font-size: var(--step-2);
+}
+
+.step-3 {
+  font-size: var(--step-3);
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 2rem;
+}
+
+.comparison-card {
+  padding: 2rem;
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+}
+
+/* Before: disconnected, hand-picked values */
+
+.arbitrary-type h3 {
+  font-size: 2.35rem;
+  line-height: 1.4;
+  margin-block: 1.1rem;
+}
+
+.arbitrary-type h4 {
+  font-size: 1.63rem;
+  line-height: 1.15;
+  margin-block: 1.7rem 0.4rem;
+}
+
+.arbitrary-type p {
+  max-width: 37rem;
+  font-size: 1.03rem;
+  line-height: 1.3;
+  margin-block: 0.75rem 1.85rem;
+}
+
+.arbitrary-type small {
+  font-size: 0.81rem;
+}
+
+/* After: one computed scale and consistent rhythm */
+
+.token-type h3 {
+  font-size: var(--step-3);
+  line-height: 1.05;
+  margin-block: 0.5lh;
+}
+
+.token-type h4 {
+  font-size: var(--step-2);
+  line-height: 1.15;
+  margin-block: 0.75lh 0.35lh;
+}
+
+.token-type p {
+  max-width: 60ch;
+  font-size: var(--step-0);
+  line-height: 1.6;
+  margin-block: 0 1lh;
+}
+
+.token-type small {
+  font-size: var(--step-n1);
+  line-height: 1.5;
+}

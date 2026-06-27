@@ -1,0 +1,16 @@
+/* Step 1: Page layout
+   - Style body and .page-header with comfortable outer padding.
+   - Stack cards in a single column (.card-list): no grid, no side-by-side rows.
+   - The finished page must scroll well past the viewport; 40 stacked cards
+     with spacing should get you there. */
+
+/* Step 2: Card component
+   - Style .card, .card-number, .card-title, .card-body.
+   - Give each card generous padding and margin (or gap on .card-list) so the
+     list feels readable and the scroll distance is obvious in your video. */
+
+/* Step 3: After the page scrolls smoothly and cards look right, add to .card:
+     content-visibility: auto;
+     contain-intrinsic-size: auto 180px;
+   Enable Paint Flashing in DevTools and compare before/after.
+   Try removing contain-intrinsic-size to see the scrollbar jump. */

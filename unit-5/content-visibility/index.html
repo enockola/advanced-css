@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content-visibility Demo</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>content-visibility Demo</h1>
+        <p>
+            This page has 40 cards in the markup. Build out <code>css/main.css</code>
+            so they stack in a single column with comfortable spacing and the page
+            scrolls well past the viewport. Then open Chrome DevTools, go to
+            More Tools &gt; Rendering, enable Paint Flashing, and compare scrolling
+            before and after you add <code>content-visibility: auto</code> and
+            <code>contain-intrinsic-size</code> to <code>.card</code>.
+        </p>
+    </header>
+
+    <div class="card-list">
+        <article class="card">
+            <span class="card-number">#1</span>
+            <p class="card-title">CSS Grid Layout</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#2</span>
+            <p class="card-title">Custom Properties</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#3</span>
+            <p class="card-title">Container Queries</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#4</span>
+            <p class="card-title">Flexbox Alignment</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#5</span>
+            <p class="card-title">Color Functions</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#6</span>
+            <p class="card-title">Typography Scale</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#7</span>
+            <p class="card-title">Animation Performance</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#8</span>
+            <p class="card-title">Stacking Contexts</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#9</span>
+            <p class="card-title">Logical Properties</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#10</span>
+            <p class="card-title">Aspect Ratio</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#11</span>
+            <p class="card-title">Scroll Snap</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#12</span>
+            <p class="card-title">CSS Layers</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#13</span>
+            <p class="card-title">Nesting Syntax</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#14</span>
+            <p class="card-title">Subgrid</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#15</span>
+            <p class="card-title">View Transitions</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#16</span>
+            <p class="card-title">Anchor Positioning</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#17</span>
+            <p class="card-title">CSS Scope</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#18</span>
+            <p class="card-title">Color Gamut</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#19</span>
+            <p class="card-title">Font Variation</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#20</span>
+            <p class="card-title">Filter Effects</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#21</span>
+            <p class="card-title">Blend Modes</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#22</span>
+            <p class="card-title">Writing Modes</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#23</span>
+            <p class="card-title">CSS Counters</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#24</span>
+            <p class="card-title">CSS Math Functions</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#25</span>
+            <p class="card-title">Intrinsic Sizing</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#26</span>
+            <p class="card-title">Selector Specificity</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#27</span>
+            <p class="card-title">Media Features</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#28</span>
+            <p class="card-title">The will-change Property</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#29</span>
+            <p class="card-title">The contain Property</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#30</span>
+            <p class="card-title">Layer Ordering</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#31</span>
+            <p class="card-title">Computed Values</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#32</span>
+            <p class="card-title">Used Values</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#33</span>
+            <p class="card-title">Initial Values</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#34</span>
+            <p class="card-title">Inheritance Chain</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#35</span>
+            <p class="card-title">The Cascade</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#36</span>
+            <p class="card-title">Specificity Layers</p>
+            <p class="card-body">Understanding this property means building layouts that were previously only possible with JavaScript. The key is thinking about what the browser needs to know to render it correctly.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#37</span>
+            <p class="card-title">CSS Nesting</p>
+            <p class="card-body">This feature is now a standard part of everyday CSS workflows. Knowing when to apply it and when to leave it alone separates good CSS from great CSS.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#38</span>
+            <p class="card-title">Houdini Paint API</p>
+            <p class="card-body">The rendering pipeline treats this property differently from others. That distinction helps you write styles that perform well even on lower-powered devices.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#39</span>
+            <p class="card-title">CSS Masking</p>
+            <p class="card-body">Many developers first encounter this when debugging an unexpected layout behavior. Once understood, it becomes one of the most reliable tools available.</p>
+        </article>
+
+        <article class="card">
+            <span class="card-number">#40</span>
+            <p class="card-title">CSS Shapes</p>
+            <p class="card-body">Browser support has improved dramatically over the past two years. You can use this in production today, though checking compatibility against your audience's browsers is worth doing.</p>
+        </article>
+    </div>
+
+</body>
+</html>

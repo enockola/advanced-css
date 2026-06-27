@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Modular Scale Demo</title>
+
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <link rel="stylesheet" href="modular-scale.css" />
+
+    <script src="modular-scale.js" defer></script>
+  </head>
+
+  <body>
+    <main class="scale-demo">
+      <header class="demo-header">
+        <p class="eyebrow">WDD 331R Teaching Topic</p>
+        <h1>Modular Scale Tokens and Typographic Rhythm</h1>
+
+        <p>
+          This demo builds an entire type scale from one base size and one ratio.
+          Changing the ratio updates every step.
+        </p>
+      </header>
+
+      <section class="demo-section" aria-labelledby="controls-title">
+        <h2 id="controls-title">Turn the ratio knob</h2>
+
+        <label for="ratio">
+          Ratio:
+          <output id="ratio-output" for="ratio">1.250</output>
+        </label>
+
+        <input
+          id="ratio"
+          type="range"
+          min="1.1"
+          max="1.5"
+          step="0.001"
+          value="1.25"
+          list="ratio-stops"
+        />
+
+        <datalist id="ratio-stops">
+          <option value="1.2" label="Minor Third"></option>
+          <option value="1.25" label="Major Third"></option>
+          <option value="1.333" label="Perfect Fourth"></option>
+        </datalist>
+
+        <p class="demo-note">
+          Move the slider and watch every scale step update from the same ratio
+          token.
+        </p>
+      </section>
+
+      <section class="demo-section" aria-labelledby="table-title">
+        <h2 id="table-title">Computed type scale</h2>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Step</th>
+                <th>Calculation</th>
+                <th>Example</th>
+                <th>Computed size</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>-2</td>
+                <td><code>base × ratio⁻²</code></td>
+                <td><span class="scale-sample step-n2">Caption text</span></td>
+                <td class="computed-value" data-target=".step-n2"></td>
+              </tr>
+
+              <tr>
+                <td>-1</td>
+                <td><code>base × ratio⁻¹</code></td>
+                <td><span class="scale-sample step-n1">Supporting text</span></td>
+                <td class="computed-value" data-target=".step-n1"></td>
+              </tr>
+
+              <tr>
+                <td>0</td>
+                <td><code>base</code></td>
+                <td><span class="scale-sample step-0">Body text</span></td>
+                <td class="computed-value" data-target=".step-0"></td>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td><code>base × ratio¹</code></td>
+                <td><span class="scale-sample step-1">Lead paragraph</span></td>
+                <td class="computed-value" data-target=".step-1"></td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td><code>base × ratio²</code></td>
+                <td><span class="scale-sample step-2">Section heading</span></td>
+                <td class="computed-value" data-target=".step-2"></td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td><code>round(base × ratio³, 1px)</code></td>
+                <td><span class="scale-sample step-3">Display heading</span></td>
+                <td class="computed-value" data-target=".step-3"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="demo-section" aria-labelledby="comparison-title">
+        <h2 id="comparison-title">Before and after</h2>
+
+        <div class="comparison">
+          <article class="comparison-card arbitrary-type">
+            <p class="comparison-label">Before: arbitrary values</p>
+
+            <h3>A Better Type System</h3>
+
+            <h4>Font sizes chosen separately</h4>
+
+            <p>
+              These values do not come from one shared ratio. The sizes, line
+              heights, and spacing were selected independently.
+            </p>
+
+            <small>Supporting information</small>
+          </article>
+
+          <article class="comparison-card token-type">
+            <p class="comparison-label">After: computed scale</p>
+
+            <h3>A Better Type System</h3>
+
+            <h4>Every size uses the same ratio</h4>
+
+            <p>
+              These values come from the computed scale. The text measure uses
+              ch, and the spacing uses line-height units to create rhythm.
+            </p>
+
+            <small>Supporting information</small>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
