@@ -8,6 +8,7 @@
 @import "./base/elements.css" layer(base);
 
 @import "./layout/home.css" layer(layout);
+@import "./layout/resume.css" layer(layout);
 @import "./layout/custom-properties.css" layer(layout);
 @import "./layout/layered-components.css" layer(layout);
 @import "./layout/lightning-css.css" layer(layout);

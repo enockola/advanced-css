@@ -5,7 +5,7 @@
 **Course:** WDD 331R Advanced CSS  
 **Live Site:** [Visit Site](https://enockola.github.io/advanced-css/)
 
-Recent assignment pages are [Container Queries Demo](https://enockola.github.io/advanced-css/unit-4/advanced/container-demo.html), and [Sticky](https://enockola.github.io/advanced-css/unit-4/advanced/sticky-demo.html)
+Recent assignment pages are [Content visibility](https://enockola.github.io/advanced-css/unit-5/content-visibility/index.html)
 
 ## About
 

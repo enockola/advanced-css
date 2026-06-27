@@ -7,14 +7,10 @@
     "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 
-  --font-family-mono: monospace;
-
   /* Semantic font-family roles */
   --font-family-heading: var(--font-family-custom);
   --font-family-body: var(--font-family-sans);
-  --font-family-code: var(--font-family-mono);
 
-  --font-size-xs: 0.694rem;
   --font-size-sm: 0.833rem;
   --font-size-md: clamp(1rem, calc(0.9545rem + 0.2273vw), 1.125rem);
   --font-size-lg: clamp(1.2rem, calc(1.1455rem + 0.2727vw), 1.35rem);
@@ -34,11 +30,7 @@
   --line-height-4xl: 1.1;
 
   /* Semantic font-size roles */
-  --font-size-overline: var(--font-size-xs);
-  --font-size-caption: var(--font-size-sm);
-  --font-size-body-sm: var(--font-size-sm);
   --font-size-body: var(--font-size-md);
-  --font-size-body-lg: var(--font-size-lg);
   --font-size-heading-sm: var(--font-size-xl);
   --font-size-heading-md: var(--font-size-2xl);
   --font-size-heading-lg: var(--font-size-3xl);

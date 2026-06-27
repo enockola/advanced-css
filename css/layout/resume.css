@@ -1,0 +1,201 @@
+/* Resume page structure */
+.resume {
+  width: min(100% - 2rem, 8.5in);
+  margin-inline: auto;
+  padding: 0.5in;
+}
+
+/* Header */
+.resume-header {
+  text-align: center;
+  margin-top: var(--spacing-md);
+}
+
+.resume__contact ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main resume sections */
+.resume-section {
+  margin-top: 1rem;
+}
+
+.resume-section > h2 {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid currentColor;
+  text-transform: uppercase;
+}
+
+/* Optional horizontal rules in the HTML */
+.resume hr {
+  margin-block: 0.75rem;
+  border: 0;
+  border-top: 1px solid currentColor;
+}
+
+.resume-entry__heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.25rem 1rem;
+  align-items: start;
+}
+
+.resume-entry__heading h3,
+.resume-entry__heading p {
+  margin: 0;
+}
+
+.resume-entry__date {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Bullet lists */
+.resume-list {
+  margin: 0.25rem 0 0;
+  padding-inline-start: 1.5rem;
+}
+.resume-list li {
+  padding-inline-start: 0.15rem;
+}
+
+.resume-entry__details {
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.resume-entry__details li + li {
+  margin-top: 0.2rem;
+}
+
+/* Skills or coursework lists */
+.resume-skills {
+  margin: 0;
+}
+
+.resume-skills div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0.5rem;
+}
+
+.resume-skills dt {
+  font-weight: bold;
+}
+
+.resume-skills dd {
+  margin: 0;
+}
+
+.resume-entry__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.resume-entry__row > :first-child {
+  flex: 1;
+  min-width: 0;
+}
+.resume-entry__row > * {
+  margin: 0;
+}
+.resume-entry__date {
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.resume-tags {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+/* Smaller screens */
+@media (max-width: 40rem) {
+  .resume {
+    width: min(100% - 1rem, 8.5in);
+    padding: 1rem;
+  }
+
+  .resume-entry__heading {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-entry__date {
+    text-align: left;
+    white-space: normal;
+  }
+
+  .resume-skills div {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-entry__row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+  .resume-entry__date {
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+/* Print as a traditional resume */
+@page {
+  size: letter;
+  margin: 0.4in 0.5in;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+  html,
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.25;
+  }
+
+  .site-header,
+  .site-nav,
+  .theme-menu,
+  .skip-link,
+  button {
+    display: none;
+  }
+
+  .resume-section {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .resume-entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .resume-sheet a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    font-weight: normal;
+    overflow-wrap: anywhere;
+  }
+}
