@@ -1,0 +1,318 @@
+:root {
+  --motion-in: 140ms;
+  --motion-out: 220ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.site-name {
+  font-weight: 800;
+}
+
+.site-header nav,
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+/* motion */
+.site-header nav a {
+  display: inline-block;
+  color: var(--color-text-muted);
+  text-decoration: none;
+
+  transition:
+    color var(--motion-out) ease-out,
+    transform var(--motion-out) var(--motion-ease);
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.site-header nav a:focus-visible,
+.card-link:focus-visible {
+  outline: var(--outline-width) solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Stronger movement for the Contact CTA */
+
+.site-header nav .nav-cta {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--header-text);
+
+  transition:
+    background-color var(--motion-out) ease-out,
+    border-color var(--motion-out) ease-out,
+    transform var(--motion-out) var(--motion-ease),
+    box-shadow var(--motion-out) ease-out;
+}
+
+.site-header nav .nav-cta:hover,
+.site-header nav .nav-cta:focus-visible {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: var(--header-text);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* main page */
+main {
+  width: min(
+    calc(100% - (2 * var(--page-padding))),
+    var(--container-width)
+  );
+  margin-inline: auto;
+  padding-block: var(--spacing-lg);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.dashboard-header p,
+.card p {
+  color: var(--color-text-muted);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.status-badge,
+.card-tag {
+  padding: 0.3rem 0.65rem;
+  border-radius: 100vmax;
+  background: var(--color-accent);
+  color: var(--header-text);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.actions {
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: var(--spacing-md);
+}
+
+.card {
+  display: grid;
+  align-content: start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.card-tag--pending {
+  background: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+
+.actions .btn {
+  transition:
+    background-color var(--motion-out) ease-out,
+    border-color var(--motion-out) ease-out,
+    color var(--motion-out) ease-out,
+    transform var(--motion-out) var(--motion-ease),
+    box-shadow var(--motion-out) ease-out;
+}
+
+/* Primary: strongest response */
+
+.actions .btn-primary:hover:not(:disabled),
+.actions .btn-primary:focus-visible {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Secondary: medium response */
+
+.actions .btn-secondary {
+  border: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  box-shadow: none;
+}
+
+.actions .btn-secondary:hover:not(:disabled),
+.actions .btn-secondary:focus-visible {
+  background: var(--color-accent);
+  color: var(--header-text);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Ghost: lightest response */
+
+.actions .btn-ghost {
+  background: transparent;
+  color: var(--color-text);
+  box-shadow: none;
+}
+
+.actions .btn-ghost:hover:not(:disabled),
+.actions .btn-ghost:focus-visible {
+  background: color-mix(
+    in oklch,
+    var(--color-surface) 80%,
+    var(--color-accent)
+  );
+  color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+/* card motion */
+.card {
+  /* Slower return after the pointer leaves. */
+  transition:
+    transform var(--motion-out) var(--motion-ease),
+    border-color var(--motion-out) ease-out,
+    box-shadow var(--motion-out) ease-out;
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--color-accent);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+
+  /* Faster movement into the active state. */
+  transition:
+    transform var(--motion-in) var(--motion-ease),
+    border-color var(--motion-in) ease-out,
+    box-shadow var(--motion-in) ease-out;
+}
+
+/* The card link moves independently from the card. */
+
+.card-link {
+  width: fit-content;
+  color: var(--color-link);
+  font-weight: 700;
+
+  transition:
+    color var(--motion-out) ease-out,
+    transform var(--motion-out) var(--motion-ease);
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  color: var(--color-link-hover);
+  transform: translateX(4px);
+}
+
+@keyframes status-pulse {
+  from {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+.status-badge {
+  transform-origin: center;
+
+  animation-name: status-pulse;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /*
+   * Make all assignment transitions effectively instant.
+   * The visual color and background changes still work,
+   * but they no longer animate.
+   */
+  .site-header nav a,
+  .site-header nav .nav-cta,
+  .actions .btn,
+  .card,
+  .card-link {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  /*
+   * Remove movement from hover and keyboard-focus states.
+   * Other visual feedback, such as color and borders,
+   * remains available.
+   */
+  .site-header nav a:hover,
+  .site-header nav a:focus-visible,
+  .site-header nav .nav-cta:hover,
+  .site-header nav .nav-cta:focus-visible,
+  .actions .btn:hover,
+  .actions .btn:focus-visible,
+  .actions .btn:active,
+  .card:hover,
+  .card:focus-within,
+  .card-link:hover,
+  .card-link:focus-visible {
+    transform: none !important;
+  }
+
+  /*
+   * Stop the continuous pulse while preserving a clear
+   * static indication that the system is live.
+   */
+  .status-badge {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
