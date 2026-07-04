@@ -5,7 +5,7 @@
 **Course:** WDD 331R Advanced CSS  
 **Live Site:** [Visit Site](https://enockola.github.io/advanced-css/)
 
-Recent assignment pages are [Content visibility](https://enockola.github.io/advanced-css/unit-5/content-visibility/index.html)
+Recent assignment pages are [Motion & Reduced Motion](https://enockola.github.io/advanced-css/unit-6/motion/index.html)
 
 ## About
 
