@@ -19,6 +19,7 @@
 @import "./components/cards.css" layer(components);
 @import "./components/forms.css" layer(components);
 @import "./components/buttons.css" layer(components);
+@import "./components/view-transitions.css" layer(components);
 @import "./components/effects.css" layer(components);
 @import "./components/scroll-snap.css" layer(utilities);
 @import url('components/theme-toggle.css') layer(components);

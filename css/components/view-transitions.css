@@ -1,0 +1,192 @@
+/*
+ * Unit 6: View Transitions API
+ *
+ * The browser captures the old and new page states, then animates
+ * between them. The named assignment preview is tracked separately
+ * from the rest of the page.
+ */
+
+/*
+ * Some author-level display styles can override the browser's
+ * default [hidden] rule, so we explicitly hide these elements.
+ */
+.assignment-grid[hidden],
+.view-transition-demo[hidden] {
+  display: none;
+}
+
+/* Unit 6 assignment button */
+
+.assignment-card--demo {
+  width: 100%;
+  min-height: 100%;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  text-align: start;
+  box-shadow: var(--shadow-card);
+
+  & span {
+    color: var(--color-accent);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--color-surface);
+    color: var(--color-text);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-card);
+    transform: translateY(-0.25rem);
+  }
+}
+
+/* Expanded detail panel */
+
+.view-transition-demo {
+  /*
+   * This matches the temporary name applied to the clicked card
+   * in view-transitions.js.
+   */
+  view-transition-name: assignment-preview;
+
+  display: grid;
+  gap: var(--space-md);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-lg);
+}
+
+.view-transition-demo__eyebrow {
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.view-transition-demo__title {
+  margin: 0;
+}
+
+.view-transition-demo__intro {
+  max-width: 65ch;
+  color: var(--color-text-muted);
+}
+
+.view-transition-demo__steps {
+  display: grid;
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(min(100%, 14rem), 1fr)
+    );
+  gap: var(--space-md);
+}
+
+.view-transition-demo__step {
+  display: grid;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background:
+    color-mix(
+      in oklch,
+      var(--color-surface) 88%,
+      var(--color-accent)
+    );
+}
+
+.view-transition-demo__step span {
+  color: var(--color-accent);
+  font-weight: 800;
+}
+
+.view-transition-demo__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.view-transition-demo__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-inline: var(--space-md);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--header-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.view-transition-demo__link:hover,
+.view-transition-demo__link:focus-visible {
+  background: var(--color-accent-hover);
+  color: var(--header-text);
+}
+
+.view-transition-demo__back {
+  min-height: 2.75rem;
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+  color: var(--color-text);
+  box-shadow: none;
+}
+
+.view-transition-demo__back:hover:not(:disabled),
+.view-transition-demo__back:focus-visible {
+  background:
+    color-mix(
+      in oklch,
+      var(--color-surface) 88%,
+      var(--color-accent)
+    );
+  color: var(--color-text);
+  box-shadow: none;
+}
+
+/*
+ * These pseudo-elements represent the old and new full-page
+ * snapshots. They are used during the theme transition.
+ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 240ms;
+  animation-timing-function: ease-in-out;
+}
+
+/*
+ * Control the card-to-detail-panel morph.
+ */
+::view-transition-group(assignment-preview) {
+  animation-duration: 560ms;
+  animation-timing-function:
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(assignment-preview),
+::view-transition-new(assignment-preview) {
+  height: 100%;
+  overflow: clip;
+}
+
+/*
+ * Accessibility: make transitions almost instant when the user
+ * requests reduced motion.
+ */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

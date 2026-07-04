@@ -26,12 +26,11 @@
 
 /* Card component */
 .card {
-  min-height: 180px;
+  /* min-height: 180px; */
   padding: 2rem;
   border: 1px solid #d8dee8;
   border-radius: 1rem;
   background-color: #ffffff;
-  box-shadow: 0 0.5rem 1.25rem rgb(15 23 42 / 10%);
   content-visibility: auto;
   contain-intrinsic-size: auto 180px;
 }

@@ -1,203 +1,242 @@
-<!doctype html class="snap-page">
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enoch Olayemi | WDD 331R Advanced CSS</title>
-    <script src="js/theme-preference.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="dist/styles.css" />
-  </head>
+<!doctype html>
+<html class="snap-page" lang="en">
 
-  <body class="home">
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enoch Olayemi | WDD 331R Advanced CSS</title>
+  <script src="js/theme-preference.js"></script>
+  <script src="js/view-transitions.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="dist/styles.css" />
+</head>
 
-    <header class="site-header">
-      <nav class="site-nav" aria-label="Main navigation">
-        <a class="site-logo" href="index.html">Enoch Olayemi</a>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <ul class="site-nav__list">
-          <li><a href="#assignments">Assignments</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <details class="theme-menu">
-          <summary class="theme-control">
-            <span class="visually-hidden">Color scheme</span>
-          </summary>
-          <div
-            class="theme-extra"
-            role="group"
-            aria-label="Choose color scheme"
-          >
-            <label class="theme-control theme-pick" data-theme-pick="light">
-              <input name="theme-preference" type="radio" value="light" />
-              <span aria-hidden="true">&#9788;&#65039;</span>
-              <span class="visually-hidden">Light</span>
-            </label>
-            <label class="theme-control theme-pick" data-theme-pick="system">
-              <input
-                name="theme-preference"
-                type="radio"
-                value="system"
-                checked
-              />
-              <span aria-hidden="true">&#9881;&#65039;</span>
-              <span class="visually-hidden">System default</span>
-            </label>
-            <label class="theme-control theme-pick" data-theme-pick="dark">
-              <input name="theme-preference" type="radio" value="dark" />
-              <span aria-hidden="true">&#127766;</span>
-              <span class="visually-hidden">Dark</span>
-            </label>
-          </div>
-        </details>
-      </nav>
-    </header>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-logo" href="index.html">Enoch Olayemi</a>
 
-    <main id="main" class="page">
-      <section class="header snap-panel" id="about">
-        <p class="header__eyebrow">WDD 331R Advanced CSS</p>
+      <ul class="site-nav__list">
+        <li><a href="#assignments">Assignments</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <details class="theme-menu">
+        <summary class="theme-control">
+          <span class="visually-hidden">Color scheme</span>
+        </summary>
+        <div class="theme-extra" role="group" aria-label="Choose color scheme">
+          <label class="theme-control theme-pick" data-theme-pick="light">
+            <input name="theme-preference" type="radio" value="light" />
+            <span aria-hidden="true">&#9788;&#65039;</span>
+            <span class="visually-hidden">Light</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="system">
+            <input name="theme-preference" type="radio" value="system" checked />
+            <span aria-hidden="true">&#9881;&#65039;</span>
+            <span class="visually-hidden">System default</span>
+          </label>
+          <label class="theme-control theme-pick" data-theme-pick="dark">
+            <input name="theme-preference" type="radio" value="dark" />
+            <span aria-hidden="true">&#127766;</span>
+            <span class="visually-hidden">Dark</span>
+          </label>
+        </div>
+      </details>
+    </nav>
+  </header>
 
-        <h1 class="header__title">Enoch Olayemi</h1>
+  <main id="main" class="page">
+    <section class="header snap-panel" id="about">
+      <p class="header__eyebrow">WDD 331R Advanced CSS</p>
 
-        <p class="header__text">
-          Hi, I’m Enoch. I’m a developer who enjoys solving problems, learning
-          how systems work, and building practical projects. I’ve been growing
-          my skills in backend development, databases, and full-stack project
-          work, and I like creating things that are both functional and
-          thoughtful.
+      <h1 class="header__title">Enoch Olayemi</h1>
+
+      <p class="header__text">
+        Hi, I’m Enoch. I’m a developer who enjoys solving problems, learning
+        how systems work, and building practical projects. I’ve been growing
+        my skills in backend development, databases, and full-stack project
+        work, and I like creating things that are both functional and
+        thoughtful.
+      </p>
+
+      <div class="header__image-wrapper">
+        <img class="header__image" src="images/enoch.jpg" alt="Photo of Enoch Olayemi" />
+      </div>
+    </section>
+
+    <section class="section snap-panel" id="assignments" aria-labelledby="assignments-title">
+      <div class="section__header">
+        <h2 id="assignments-title">Assignments</h2>
+        <p class="text-muted">
+          Here are my completed assignments and choose topic pages from the
+          semester.
+        </p>
+      </div>
+
+      <div class="assignment-grid" data-assignment-grid>
+        <button class="assignment-card assignment-card--demo" type="button" data-view-transition-open
+          aria-controls="view-transition-demo" aria-expanded="false">
+          <span>Unit 6 · Interactive Demo</span>
+
+          <strong>View Transitions API</strong>
+
+          <p>
+            Click this card to watch it smoothly transform into a detailed
+            explanation without leaving the homepage.
+          </p>
+        </button>
+
+        <a class="assignment-card" href="unit-1/custom-properties/index.html">
+          <span>Unit 1</span>
+          <strong>Custom Properties and Nesting</strong>
+          <p>
+            This assignment focused on using CSS variables and nesting to make
+            styles easier to organize and reuse.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-2/layered-components/index.html">
+          <span>Unit 2</span>
+          <strong>Layered Components</strong>
+          <p>
+            This assignment focused on organizing CSS with layers and building
+            components in a more structured way.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-2/lightning-css-demo/index.html">
+          <span>Unit 2</span>
+          <strong>Lightning CSS Setup</strong>
+          <p>
+            My teaching topic page about setting up Lightning CSS and using it
+            for nesting, prefixes, and minification.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-3/contrast-color-demo/index.html">
+          <span>Unit 3</span>
+          <strong>Contrast Color Demo</strong>
+          <p>
+            My teaching topic page about what the contrast-color() function
+            does. The mid-tone problem, and how to create fallbacks
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-3/visual-effects/index.html">
+          <span>Unit 3</span>
+          <strong>Visual Effects</strong>
+          <p>
+            In this assignment, I added visual depth and polish by applying
+            shadows, gradients, and filters to a new page of components.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-4/grid-layouts/editorial.html">
+          <span>Unit 4</span>
+          <strong>Editorial Layout</strong>
+          <p>
+            In this assignment, I created an editorial layout using CSS Grid
+            to organize content in a magazine-style format.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-4/grid-layouts/cards.html">
+          <span>Unit 4</span>
+          <strong>Card Layout</strong>
+          <p>
+            In this assignment, I created a responsive card layout using CSS
+            Grid.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-4/advanced/container-demo.html">
+          <span>Unit 4</span>
+          <strong>Container Queries Demo</strong>
+          <p>
+            In this assignment, I explored the use of container queries to
+            create responsive designs.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-4/advanced/sticky-demo.html">
+          <span>Unit 4</span>
+          <strong>Sticky Demo</strong>
+          <p>
+            In this assignment, I explored the use of sticky positioning to
+            create a sidebar that remains visible while scrolling.
+          </p>
+        </a>
+
+        <a class="assignment-card" href="unit-5/content-visibility/index.html">
+          <span>Unit 5</span>
+          <strong>Content Visibility</strong>
+          <p> In this assignment, I explored the use of the content-visibility property to optimize rendering performance.</p>
+        </a>
+      </div>
+      
+      <article class="view-transition-demo" id="view-transition-demo" data-view-transition-panel tabindex="-1" hidden>
+        <header>
+          <p class="view-transition-demo__eyebrow">
+            Unit 6 · Live Demo
+          </p>
+
+          <h3 class="view-transition-demo__title">
+            The card became this detail panel
+          </h3>
+        </header>
+
+        <p class="view-transition-demo__intro">
+          The browser captured the card before the change, updated the DOM,
+          captured this panel afterward, and animated between the two states.
         </p>
 
-        <div class="header__image-wrapper">
-          <img
-            class="header__image"
-            src="images/enoch.jpg"
-            alt="Photo of Enoch Olayemi"
-          />
+        <div class="view-transition-demo__steps">
+          <div class="view-transition-demo__step">
+            <span>1</span>
+            <strong>Capture the old view</strong>
+            <p>
+              The browser takes a temporary snapshot of the selected card.
+            </p>
+          </div>
+
+          <div class="view-transition-demo__step">
+            <span>2</span>
+            <strong>Update the DOM</strong>
+            <p>
+              JavaScript hides the grid and reveals this detail panel.
+            </p>
+          </div>
+
+          <div class="view-transition-demo__step">
+            <span>3</span>
+            <strong>Animate the new view</strong>
+            <p>
+              A shared transition name makes the card morph into the panel.
+            </p>
+          </div>
         </div>
-      </section>
 
-      <section
-        class="section snap-panel"
-        id="assignments"
-        aria-labelledby="assignments-title"
-      >
-        <div class="section__header">
-          <h2 id="assignments-title">Assignments</h2>
-          <p class="text-muted">
-            Here are my completed assignments and choose topic pages from the
-            semester.
-          </p>
+        <div class="view-transition-demo__actions">
+          <a class="view-transition-demo__link"
+            href="https://byui-cse.github.io/wdd331r-course/unit/6/learn/choose/view-transitions-api.html">
+            Read the course lesson
+          </a>
+
+          <button class="view-transition-demo__back" type="button" data-view-transition-close>
+            Back to assignments
+          </button>
         </div>
+      </article>
+    </section>
+  </main>
+</body>
 
-        <div class="assignment-grid">
-          <a class="assignment-card" href="unit-1/custom-properties/index.html">
-            <span>Unit 1</span>
-            <strong>Custom Properties and Nesting</strong>
-            <p>
-              This assignment focused on using CSS variables and nesting to make
-              styles easier to organize and reuse.
-            </p>
-          </a>
-
-          <a
-            class="assignment-card"
-            href="unit-2/layered-components/index.html"
-          >
-            <span>Unit 2</span>
-            <strong>Layered Components</strong>
-            <p>
-              This assignment focused on organizing CSS with layers and building
-              components in a more structured way.
-            </p>
-          </a>
-
-          <a
-            class="assignment-card"
-            href="unit-2/lightning-css-demo/index.html"
-          >
-            <span>Unit 2</span>
-            <strong>Lightning CSS Setup</strong>
-            <p>
-              My teaching topic page about setting up Lightning CSS and using it
-              for nesting, prefixes, and minification.
-            </p>
-          </a>
-
-          <a
-            class="assignment-card"
-            href="unit-3/contrast-color-demo/index.html"
-          >
-            <span>Unit 3</span>
-            <strong>Contrast Color Demo</strong>
-            <p>
-              My teaching topic page about what the contrast-color() function
-              does. The mid-tone problem, and how to create fallbacks
-            </p>
-          </a>
-
-          <a class="assignment-card" href="unit-3/visual-effects/index.html">
-            <span>Unit 3</span>
-            <strong>Visual Effects</strong>
-            <p>
-              In this assignment, I added visual depth and polish by applying
-              shadows, gradients, and filters to a new page of components.
-            </p>
-          </a>
-
-          <a class="assignment-card" href="unit-4/grid-layouts/editorial.html">
-            <span>Unit 4</span>
-            <strong>Editorial Layout</strong>
-            <p>
-              In this assignment, I created an editorial layout using CSS Grid
-              to organize content in a magazine-style format.
-            </p>
-          </a>
-
-          <a class="assignment-card" href="unit-4/grid-layouts/cards.html">
-            <span>Unit 4</span>
-            <strong>Card Layout</strong>
-            <p>
-              In this assignment, I created a responsive card layout using CSS
-              Grid.
-            </p>
-          </a>
-
-          <a class="assignment-card" href="unit-4/advanced/container-demo.html">
-            <span>Unit 4</span>
-            <strong>Container Queries Demo</strong>
-            <p>
-              In this assignment, I explored the use of container queries to
-              create responsive designs.
-            </p>
-          </a>
-
-          <a class="assignment-card" href="unit-4/advanced/sticky-demo.html">
-            <span>Unit 4</span>
-            <strong>Sticky Demo</strong>
-            <p>
-              In this assignment, I explored the use of sticky positioning to
-              create a sidebar that remains visible while scrolling.
-            </p>
-          </a>
-
-          <a class="assignment-card" href="unit-5/content-visibility/index.html">
-            <span>Unit 5</span>
-            <strong>Content Visibility</strong>
-            <p>
-              In this assignment, I explored the use of the content-visibility property to optimize rendering performance.
-            </p>
-            </p>
-          </a>
-        </div>
-      </section>
-    </main>
-  </body>
 </html>
