@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SVG Animation with CSS</title>
+
+    <!-- Main Practice Site styles -->
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <!-- Styles used only for this demo -->
+    <link rel="stylesheet" href="svg-animation.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-logo" href="/index.html">Enoch Olayemi</a>
+
+        <ul class="site-nav__list">
+          <li><a href="/index.html#assignments">Assignments</a></li>
+          <li><a href="/index.html#about">About</a></li>
+          <li><a href="/resume.html">Resume</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <details class="theme-menu">
+          <summary class="theme-control">
+            <span class="visually-hidden">Color scheme</span>
+          </summary>
+          <div
+            class="theme-extra"
+            role="group"
+            aria-label="Choose color scheme"
+          >
+            <label class="theme-control theme-pick" data-theme-pick="light">
+              <input name="theme-preference" type="radio" value="light" />
+              <span aria-hidden="true">&#9788;&#65039;</span>
+              <span class="visually-hidden">Light</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="system">
+              <input
+                name="theme-preference"
+                type="radio"
+                value="system"
+                checked
+              />
+              <span aria-hidden="true">&#9881;&#65039;</span>
+              <span class="visually-hidden">System default</span>
+            </label>
+            <label class="theme-control theme-pick" data-theme-pick="dark">
+              <input name="theme-preference" type="radio" value="dark" />
+              <span aria-hidden="true">&#127766;</span>
+              <span class="visually-hidden">Dark</span>
+            </label>
+          </div>
+        </details>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section>
+        <p>Unit 6 Teaching Demo</p>
+        <h1>SVG Animation with CSS</h1>
+
+        <p>
+          This demo shows two simple ideas: a heart that draws itself and a sun
+          that rotates around the correct center.
+        </p>
+      </section>
+
+      <section class="demo-controls" aria-labelledby="controls-heading">
+        <h2 id="controls-heading">Try the Demo</h2>
+
+        <div class="control-list">
+          <label>
+            <input id="slow-motion" type="checkbox" />
+            Slow down animations
+          </label>
+
+          <label>
+            <input id="reduced-motion" type="checkbox" />
+            Turn animations off
+          </label>
+
+          <label>
+            <input id="transform-fix" type="checkbox" checked />
+            Rotate around the sun
+          </label>
+
+          <button id="replay" class="btn btn-primary" type="button">
+            Replay heart
+          </button>
+        </div>
+
+        <p id="demo-status" aria-live="polite">
+          Heart is drawing. Sun is rotating.
+        </p>
+      </section>
+
+      <section class="svg-demo-grid" aria-label="SVG animation examples">
+        <article class="card">
+          <header class="card-header">
+            <div>
+              <p>Plays once</p>
+              <h2>Heart Drawing Itself</h2>
+            </div>
+
+            <span class="card-tag">forwards</span>
+          </header>
+
+          <div class="svg-stage">
+            <svg
+              class="heart-icon"
+              viewBox="0 0 120 110"
+              role="img"
+              aria-labelledby="heart-title heart-description"
+            >
+              <title id="heart-title">Animated heart</title>
+
+              <desc id="heart-description">
+                A heart outline draws itself once.
+              </desc>
+
+              <path
+                class="draw-path heart-path"
+                d="
+                M60 97
+                C53 90 20 67 20 39
+                C20 22 31 13 44 13
+                C52 13 58 18 60 25
+                C62 18 68 13 76 13
+                C89 13 100 22 100 39
+                C100 67 67 90 60 97
+              "
+              ></path>
+            </svg>
+          </div>
+
+          <p>
+            Think of the heart as one long piece of string. CSS moves the string
+            out of view, then slides it back into place.
+          </p>
+
+          <pre><code>stroke-dashoffset: var(--path-length);
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}</code></pre>
+        </article>
+
+        <article class="card">
+          <header class="card-header">
+            <div>
+              <p>Repeats continuously</p>
+              <h2>Sun Rotating Around Its Center</h2>
+            </div>
+
+            <span class="card-tag">infinite</span>
+          </header>
+
+          <div class="svg-stage sun-stage use-fill-box">
+            <svg
+              class="sun-icon"
+              viewBox="0 0 160 120"
+              role="img"
+              aria-labelledby="sun-title sun-description"
+            >
+              <title id="sun-title">Animated sun</title>
+
+              <desc id="sun-description">
+                The rays rotate around the center of the sun.
+              </desc>
+
+              <rect
+                class="viewport-guide"
+                x="1"
+                y="1"
+                width="158"
+                height="118"
+                rx="12"
+              ></rect>
+
+              <g class="sun-rays">
+                <line x1="45" y1="14" x2="45" y2="27"></line>
+                <line x1="45" y1="93" x2="45" y2="106"></line>
+
+                <line x1="0" y1="60" x2="13" y2="60"></line>
+                <line x1="77" y1="60" x2="90" y2="60"></line>
+
+                <line x1="13" y1="28" x2="23" y2="38"></line>
+                <line x1="67" y1="82" x2="77" y2="92"></line>
+
+                <line x1="13" y1="92" x2="23" y2="82"></line>
+                <line x1="67" y1="38" x2="77" y2="28"></line>
+              </g>
+
+              <circle class="sun-core" cx="45" cy="60" r="21"></circle>
+
+              <!-- Green: center of the sun -->
+              <circle class="sun-center" cx="45" cy="60" r="3"></circle>
+
+              <!-- Red: center of the whole SVG -->
+              <circle class="viewport-center" cx="80" cy="60" r="3"></circle>
+            </svg>
+          </div>
+
+          <p>
+            Turn off “Rotate around the sun.” The rays will use the center of
+            the entire SVG instead of the center of the sun.
+          </p>
+
+          <p class="center-key">
+            <span><span class="dot dot-sun"></span> Green: sun center</span>
+            <span><span class="dot dot-svg"></span> Red: whole SVG center</span>
+          </p>
+
+          <pre><code>transform-box: fill-box;
+transform-origin: center;</code></pre>
+        </article>
+      </section>
+
+      <section class="card explanation-card">
+        <h2>How the Heart Draws Itself</h2>
+
+        <ol>
+          <li>JavaScript measures the line.</li>
+          <li>CSS turns the line into one long dash.</li>
+          <li>The dash is moved out of view.</li>
+          <li>The dash moves back and reveals the heart.</li>
+        </ol>
+      </section>
+
+      <section class="card explanation-card">
+        <h2>Why the Sun Needs a Fix</h2>
+
+        <p>
+          SVG elements do not always rotate around their own center.
+          <code>transform-box: fill-box</code> tells the browser to use the sun
+          rays themselves when finding the center.
+        </p>
+      </section>
+
+      <section class="card explanation-card">
+        <h2>Reduced Motion</h2>
+
+        <p>
+          Some users prefer less movement. When reduced motion is on, the sun
+          stops and the heart stays visible.
+        </p>
+
+        <pre><code>@media (prefers-reduced-motion: reduce) {
+  .draw-path,
+  .sun-rays {
+    animation: none;
+  }
+
+  .draw-path {
+    stroke-dashoffset: 0;
+  }
+}</code></pre>
+      </section>
+    </main>
+  </body>
+</html>

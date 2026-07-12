@@ -12,7 +12,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-  
+
   .header__title {
     max-width: 12ch;
     color: var(--color-text);
@@ -27,7 +27,6 @@
     color: var(--color-text-muted);
     font-size: var(--font-size-md);
   }
-
 
   .header__image-wrapper {
     position: relative;
@@ -65,7 +64,6 @@
     object-position: 100% 7%;
   }
 
-
   .section {
     padding-block: var(--space-lg);
   }
@@ -78,5 +76,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
     gap: var(--space-md);
+  }
+
+  .site-footer {
+    margin: auto;
+    align-items: center;
+    padding-block: var(--space-lg);
+  }
+
+  .social-links {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }

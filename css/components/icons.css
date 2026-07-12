@@ -1,0 +1,36 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+
+/* Helps icons line up with visible link or button text */
+a:has(.icon),
+button:has(.icon) {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* Used for GitHub and LinkedIn icon-only links */
+.icon-link {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  color: var(--color-accent);
+}
+
+.site-nav__list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}

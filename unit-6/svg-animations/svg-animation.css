@@ -1,0 +1,198 @@
+:root {
+  --draw-time: 1.5s;
+  --sun-time: 5s;
+}
+
+.card {
+  padding: var(--spacing-lg);
+}
+
+/* Demo controls */
+
+.demo-controls {
+  margin-block: var(--spacing-lg);
+}
+
+.control-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.control-list label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+#demo-status {
+  margin-top: var(--spacing-md);
+  font-weight: 700;
+}
+
+/* Demo layout */
+
+.svg-demo-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--spacing-lg);
+  margin-block: var(--spacing-lg);
+}
+
+.svg-stage {
+  display: grid;
+  place-items: center;
+  min-height: 18rem;
+  margin-block: var(--spacing-md);
+  overflow: hidden;
+}
+
+.explanation-card {
+  margin-block: var(--spacing-lg);
+}
+
+/* SVG sizes */
+
+.heart-icon {
+  display: block;
+  width: min(14rem, 75%);
+  overflow: visible;
+}
+
+.sun-icon {
+  display: block;
+  width: min(22rem, 95%);
+  overflow: visible;
+}
+
+/* Heart draw-on animation */
+
+.draw-path {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /*
+   * JavaScript measures the path and creates
+   * the --path-length custom property.
+   */
+  stroke-dasharray: var(--path-length);
+  stroke-dashoffset: var(--path-length);
+}
+
+.heart-path {
+  animation: draw-heart var(--draw-time) ease-out forwards;
+}
+
+@keyframes draw-heart {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Rotating sun */
+
+.sun-rays {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transform-origin: center;
+  animation: rotate-sun var(--sun-time) linear infinite;
+}
+
+/*
+ * This changes the transform reference from the entire
+ * SVG area to the rays' own box.
+ */
+.use-fill-box .sun-rays {
+  transform-box: fill-box;
+}
+
+.sun-core {
+  fill: var(--color-accent);
+}
+
+@keyframes rotate-sun {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Teaching guides */
+
+.viewport-guide {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 2;
+  stroke-dasharray: 7 7;
+}
+
+.sun-center {
+  fill: green;
+}
+
+.viewport-center {
+  fill: red;
+}
+
+.center-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.center-key span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.dot-sun {
+  background: green;
+}
+
+.dot-svg {
+  background: red;
+}
+
+/* Slow-motion demonstration */
+
+.slow-motion {
+  --draw-time: 4s;
+  --sun-time: 12s;
+}
+
+/* Simulated reduced-motion control */
+
+.reduced-motion .draw-path,
+.reduced-motion .sun-rays {
+  animation: none;
+}
+
+.reduced-motion .draw-path {
+  stroke-dashoffset: 0;
+}
+
+/* Actual operating-system reduced-motion setting */
+
+@media (prefers-reduced-motion: reduce) {
+  .draw-path,
+  .sun-rays {
+    animation: none;
+  }
+
+  .draw-path {
+    stroke-dashoffset: 0;
+  }
+}
