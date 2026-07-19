@@ -164,16 +164,92 @@
   html,
   body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 10pt;
-    line-height: 1.25;
+    font-size: 8.5pt;
+    line-height: 1.16;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background: #fff;
   }
 
   .site-header,
   .site-nav,
   .theme-menu,
   .skip-link,
-  button {
+    button {
     display: none;
+  }
+
+  .page,
+  .resume-shell,
+  .resume-sheet {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .resume-header {
+    margin: 0 0 0.08in;
+  }
+
+  .resume-header h1 {
+    margin: 0;
+    font-size: 17pt;
+    line-height: 1;
+  }
+
+  .resume-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 0.06in;
+    margin-top: 0.03in;
+    font-size: 8pt;
+  }
+
+  .resume-section {
+    margin-top: 0.08in;
+  }
+
+  .resume-section > h2 {
+    margin: 0 0 0.035in;
+    padding-bottom: 0.015in;
+    font-size: 10pt;
+    line-height: 1.05;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .resume-entry + .resume-entry {
+    margin-top: 0.055in;
+  }
+
+  .resume-entry h3 {
+    font-size: 9pt;
+    line-height: 1.1;
+  }
+
+  .resume-entry__row {
+    gap: 0.1in;
+    break-inside: avoid;
+  }
+
+  .resume-list {
+    margin-top: 0.015in;
+    padding-inline-start: 0.18in;
+  }
+
+  .resume-list li {
+    padding-inline-start: 0.02in;
+  }
+
+  .resume-list li + li {
+    margin-top: 0.012in;
   }
 
   .resume-section {
@@ -182,20 +258,17 @@
   }
 
   .resume-entry {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   p,
   li {
-    orphans: 3;
-    widows: 3;
+    orphans: 2;
+    widows: 2;
   }
 
   .resume-sheet a[href^="http"]::after {
-    content: " (" attr(href) ")";
-    font-size: 8pt;
-    font-weight: normal;
-    overflow-wrap: anywhere;
+    content: none;
   }
 }

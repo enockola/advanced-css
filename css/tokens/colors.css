@@ -2,11 +2,11 @@
     color-scheme: light;
 
     /* ---- Seeds ---- */
-    --seed-bg: #f4f6f8;
+    --seed-bg: #f5f7fb;
     --seed-surface: #ffffff;
-    --seed-text: #1e293b;
-    --seed-text-muted: #64748b;
-    --seed-accent: oklch(0.55 0.2 260);  /* CHANGE THIS: Choose your own hue */
+    --seed-text: #111827;
+    --seed-text-muted: #5b6474;
+    --seed-accent: oklch(0.55 0.22 273);
     --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
     --seed-link: var(--seed-accent);
     --seed-link-hover: var(--seed-accent-hover);
@@ -14,7 +14,8 @@
     --seed-border-strong: #cbd5e1;
 
     /* ---- Accent ramp ---- */
-    --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
+    --accent-200: color-mix(in oklch, var(--seed-accent) 24%, white);
+    --seed-warm: oklch(0.72 0.16 52);
 }
 
 /* User chose dark */
@@ -42,13 +43,18 @@ html {
     --color-link-hover: light-dark(var(--seed-link-hover), oklch(0.72 0.18 240));
     --color-border: light-dark(var(--seed-border), oklch(0.32 0.02 260));
     --color-border-strong: light-dark(var(--seed-border-strong), oklch(0.38 0.02 260));
+    --color-primary: var(--color-accent);
+    --color-primary-hover: var(--color-accent-hover);
+    --color-muted: var(--color-text-muted);
+    --color-warm: light-dark(var(--seed-warm), oklch(0.76 0.14 58));
+    --color-accent-soft: light-dark(var(--accent-200), oklch(0.3 0.08 273));
 
     /* Tint the native checkboxes, radios, and range sliders */
     accent-color: var(--color-accent);
 
     /* ---- Header chrome ---- */
-    --header-bg: var(--color-accent);
-    --header-text: light-dark(#ffffff, #f0f4f8);
+    --header-bg: var(--color-surface);
+    --header-text: var(--color-text);
 
     /* ---- Theme toggle (consumed by theme-toggle.css) ---- */
     --theme-toggle-bg: color-mix(in srgb, var(--header-text) 20%, var(--header-bg));

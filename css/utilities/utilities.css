@@ -3,7 +3,7 @@
 }
 
 .text-muted {
-  color: var(--color-muted);
+  color: var(--color-text-muted);
 }
 
 .skip-link {
@@ -11,10 +11,11 @@
   left: var(--space-md);
   top: var(--space-md);
   padding: var(--space-sm) var(--space-md);
-  background: var(--color-primary);
+  background: var(--color-accent);
   color: white;
   border-radius: var(--radius-sm);
   transform: translateY(-150%);
+  z-index: 100;
 }
 
 .skip-link:focus {

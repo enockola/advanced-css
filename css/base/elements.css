@@ -7,14 +7,21 @@ body {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-link);
   text-decoration-thickness: 0.12em;
   text-underline-offset: 0.2em;
 }
 
 a:hover,
 a:focus-visible {
-  color: var(--color-primary-hover);
+  color: var(--color-link-hover);
+}
+
+p { max-width: 70ch; }
+
+:focus-visible {
+  outline: var(--outline-width) solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 h1,

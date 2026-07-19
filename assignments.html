@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Advanced CSS coursework and experiments by Enoch Olayemi." />
+  <title>Coursework | Enoch Olayemi</title><script src="js/theme-preference.js"></script><script src="js/view-transitions.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="dist/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="site-nav" aria-label="Main navigation"><a class="site-logo" href="index.html">EO<span>.</span></a><ul class="site-nav__list"><li><a href="index.html#work">Work</a></li><li><a href="assignments.html" aria-current="page">Coursework</a></li><li><a href="resume.html">Résumé</a></li><li><a href="contact.html">Contact</a></li></ul><details class="theme-menu"><summary class="theme-control"><span class="visually-hidden">Color scheme</span></summary><div class="theme-extra" role="group" aria-label="Choose color scheme"><label class="theme-control theme-pick" data-theme-pick="light"><input name="theme-preference" type="radio" value="light" /><span aria-hidden="true">☀️</span><span class="visually-hidden">Light</span></label><label class="theme-control theme-pick" data-theme-pick="system"><input name="theme-preference" type="radio" value="system" checked /><span aria-hidden="true">⚙️</span><span class="visually-hidden">System</span></label><label class="theme-control theme-pick" data-theme-pick="dark"><input name="theme-preference" type="radio" value="dark" /><span aria-hidden="true">🌖</span><span class="visually-hidden">Dark</span></label></div></details></nav></header>
+  <main id="main" class="page">
+    <header class="assignments-hero"><p class="eyebrow">WDD 331R · Advanced CSS</p><h1>A semester of CSS exploration.</h1><p>Experiments and assignments organized by the design problem they investigate—from foundations and visual systems to responsive layout and motion.</p></header>
+    <div data-assignment-grid>
+    <section class="course-group" aria-labelledby="foundations-title"><div class="course-group__heading"><span class="course-group__number">01</span><div><h2 id="foundations-title">Foundations &amp; architecture</h2><p>Reusable values, cascade organization, selectors, and production workflows.</p></div></div><div class="course-grid">
+      <a class="assignment-card course-card" href="unit-1/custom-properties/index.html"><span>Unit 1</span><strong>Custom Properties &amp; Nesting</strong><p>A reusable token system and modern CSS organization.</p></a>
+      <a class="assignment-card course-card" href="unit-1/teach-1/filtered-child/index.html"><span>Unit 1</span><strong>Filtered :nth-child()</strong><p>A teaching demo for selecting among filtered sibling sets.</p></a>
+      <a class="assignment-card course-card" href="unit-2/layered-components/index.html"><span>Unit 2</span><strong>Layered Components</strong><p>Structured component styles using cascade layers.</p></a>
+      <a class="assignment-card course-card" href="unit-2/lightning-css-demo/index.html"><span>Unit 2</span><strong>Lightning CSS</strong><p>A teaching page about bundling, prefixes, and minification.</p></a>
+      <a class="assignment-card course-card" href="unit-2/tutorial/index.html"><span>Unit 2</span><strong>CSS Architecture Tutorial</strong><p>A complete layered CSS build applied to a content page.</p></a>
+    </div></section>
+    <section class="course-group" aria-labelledby="visual-title"><div class="course-group__heading"><span class="course-group__number">02</span><div><h2 id="visual-title">Visual design</h2><p>Color, contrast, depth, clipping, and expressive effects.</p></div></div><div class="course-grid">
+      <a class="assignment-card course-card" href="unit-3/contrast-color-demo/index.html"><span>Unit 3</span><strong>Contrast Color</strong><p>An interactive look at readable foreground color and fallbacks.</p></a>
+      <a class="assignment-card course-card" href="unit-3/clip-mask-demo/index.html"><span>Unit 3</span><strong>Clip &amp; Mask</strong><p>Shape and reveal techniques with clipping and masks.</p></a>
+      <a class="assignment-card course-card" href="unit-3/visual-effects/index.html"><span>Unit 3</span><strong>Visual Effects</strong><p>Gradients, shadows, filters, and layered atmosphere.</p></a>
+    </div></section>
+    <section class="course-group" aria-labelledby="layout-title"><div class="course-group__heading"><span class="course-group__number">03</span><div><h2 id="layout-title">Layout systems</h2><p>Flexible composition at the page, component, and content level.</p></div></div><div class="course-grid">
+      <a class="assignment-card course-card" href="unit-4/grid-layouts/editorial.html"><span>Unit 4</span><strong>Editorial Grid</strong><p>A magazine-style responsive composition.</p></a>
+      <a class="assignment-card course-card" href="unit-4/grid-layouts/cards.html"><span>Unit 4</span><strong>Card Grid</strong><p>A flexible grid for consistent responsive cards.</p></a>
+      <a class="assignment-card course-card" href="unit-4/advanced/container-demo.html"><span>Unit 4</span><strong>Container Queries</strong><p>Components that respond to their available space.</p></a>
+      <a class="assignment-card course-card" href="unit-4/advanced/sticky-demo.html"><span>Unit 4</span><strong>Sticky Positioning</strong><p>A persistent sidebar within its scroll context.</p></a>
+      <a class="assignment-card course-card" href="unit-4/advanced/snap-carousel.html"><span>Unit 4</span><strong>Snap Carousel</strong><p>A touch-friendly horizontal scrolling experience.</p></a>
+      <a class="assignment-card course-card" href="unit-4/intrinsic-sizing/index.html"><span>Unit 4</span><strong>Intrinsic Sizing</strong><p>Layouts that adapt to the natural needs of their content.</p></a>
+    </div></section>
+    <section class="course-group" aria-labelledby="performance-title"><div class="course-group__heading"><span class="course-group__number">04</span><div><h2 id="performance-title">Performance &amp; scale</h2><p>Rendering efficiency and systematic typographic proportion.</p></div></div><div class="course-grid">
+      <a class="assignment-card course-card" href="unit-5/content-visibility/index.html"><span>Unit 5</span><strong>Content Visibility</strong><p>Deferring off-screen rendering for improved performance.</p></a>
+      <a class="assignment-card course-card" href="unit-5/modular-scale-tokens/index.html"><span>Unit 5</span><strong>Modular Scale</strong><p>Fluid type tokens built from a deliberate ratio.</p></a>
+      <a class="assignment-card course-card" href="resume.html"><span>Unit 5</span><strong>Accessible Résumé</strong><p>Semantic, responsive, and print-ready professional content.</p></a>
+      <a class="assignment-card course-card" href="contact.html"><span>Unit 5</span><strong>Accessible Contact Form</strong><p>Clear labels, focus states, and helpful form structure.</p></a>
+    </div></section>
+    <section class="course-group" aria-labelledby="motion-title"><div class="course-group__heading"><span class="course-group__number">05</span><div><h2 id="motion-title">Motion &amp; interaction</h2><p>Animation that communicates state, personality, and change.</p></div></div><div class="course-grid">
+      <a class="assignment-card course-card" href="unit-6/motion/index.html"><span>Unit 6</span><strong>Interface Motion</strong><p>Transitions and animation used to support interaction.</p></a>
+      <a class="assignment-card course-card" href="unit-6/svg-animations/index.html"><span>Unit 6</span><strong>SVG Animation</strong><p>Animating vector graphics with CSS transforms and timing.</p></a>
+      <button class="assignment-card assignment-card--demo course-card" type="button" data-view-transition-open aria-controls="view-transition-demo" aria-expanded="false"><span>Unit 6 · Interactive Demo</span><strong>View Transitions API</strong><p>Click this card to watch it smoothly transform into a detailed explanation without leaving the coursework page.</p></button>
+    </div></section>
+    </div>
+
+    <article class="view-transition-demo" id="view-transition-demo" data-view-transition-panel tabindex="-1" hidden>
+      <header>
+        <p class="view-transition-demo__eyebrow">Unit 6 · Live Demo</p>
+        <h2 class="view-transition-demo__title">The card became this detail panel</h2>
+      </header>
+      <p class="view-transition-demo__intro">The browser captured the card before the change, updated the DOM, captured this panel afterward, and animated between the two states.</p>
+      <div class="view-transition-demo__steps">
+        <div class="view-transition-demo__step"><span>1</span><strong>Capture the old view</strong><p>The browser takes a temporary snapshot of the selected card.</p></div>
+        <div class="view-transition-demo__step"><span>2</span><strong>Update the DOM</strong><p>JavaScript hides the coursework archive and reveals this detail panel.</p></div>
+        <div class="view-transition-demo__step"><span>3</span><strong>Animate the new view</strong><p>A shared transition name makes the card morph into the panel.</p></div>
+      </div>
+      <div class="view-transition-demo__actions">
+        <a class="view-transition-demo__link" href="https://byui-cse.github.io/wdd331r-course/unit/6/learn/choose/view-transitions-api.html">Read the course lesson</a>
+        <button class="view-transition-demo__back" type="button" data-view-transition-close>Back to coursework</button>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p class="site-footer__title">Enoch Olayemi</p><ul class="site-footer__links"><li><a href="index.html">Home</a></li><li><a href="resume.html">Résumé</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://github.com/enockola">GitHub</a></li></ul><p class="site-footer__copyright">© 2026 Enoch Olayemi. Designed and built with intention.</p></div></footer>
+</body></html>

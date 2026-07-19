@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Resume of Enoch Olayemi, a Computer Science student and web developer."
+      content="Resume of Enoch Olayemi, a Computer Science student focused on AI engineering and full-stack web development."
     />
     <title>Enoch Olayemi | Resume</title>
     <script src="js/theme-preference.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="dist/styles.css" />
   </head>
 
   <body>
     <header class="site-header">
       <nav class="site-nav" aria-label="Main navigation">
-        <a class="site-logo" href="index.html">Enoch Olayemi</a>
+        <a class="site-logo" href="index.html">EO<span>.</span></a>
 
         <ul class="site-nav__list">
-          <li><a href="resume.html" aria-current="page">Resume</a></li>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="assignments.html">Coursework</a></li>
+          <li><a href="resume.html" aria-current="page">Résumé</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <details class="theme-menu">
@@ -57,7 +62,12 @@
 
     <a class="skip-link" href="#resume">Skip to resume</a>
 
-    <main id="resume" class="page" aria-labelledby="resume-name">
+    <main id="resume" class="page resume-shell" aria-labelledby="resume-name">
+      <div class="resume-actions">
+        <a class="btn btn--secondary" href="contact.html">Contact me</a>
+        <button type="button" onclick="window.print()">Print résumé</button>
+      </div>
+      <article class="resume-sheet">
       <header class="resume-header">
         <h1 id="resume-name">Enoch Olayemi</h1>
 
@@ -75,10 +85,10 @@
       <section class="resume-section" aria-labelledby="summary-heading">
         <h2 id="summary-heading">Summary</h2>
         <p>
-          Computer Science student and web developer with experience building
-          responsive applications, supporting users, and collaborating on
-          full-stack projects. Skilled in JavaScript, Node.js, Express, SQL,
-          HTML, and CSS.
+          Computer Science student focused on AI engineering and full-stack web
+          development, with experience building responsive applications,
+          supporting users, and collaborating on software projects. Skilled in
+          JavaScript, Node.js, Express, SQL, HTML, and CSS.
         </p>
       </section>
 
@@ -95,11 +105,14 @@
           </div>
 
           <div class="resume-entry__row">
-            <p>Bachelor of Science in Computer Science; Minor: Web Design</p>
+            <p>Bachelor of Science in Computer Science; Minor: AI Engineering</p>
             <p>GPA: 3.989/4.0</p>
           </div>
 
           <ul class="resume-list">
+            <li>
+              <strong>Certificate:</strong> Full-Stack Web Design and Development
+            </li>
             <li>
               <strong>Relevant Coursework:</strong>
               Data Structures &amp; Algorithms, Discrete Structures, and Data
@@ -254,6 +267,8 @@
           </ul>
         </article>
       </section>
+      </article>
     </main>
+    <footer class="site-footer"><div class="site-footer__inner"><p class="site-footer__title">Enoch Olayemi</p><ul class="site-footer__links"><li><a href="index.html">Home</a></li><li><a href="assignments.html">Coursework</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://www.linkedin.com/in/enoch-olayemi/">LinkedIn</a></li></ul><p class="site-footer__copyright">© 2026 Enoch Olayemi. Designed and built with intention.</p></div></footer>
   </body>
 </html>
