@@ -153,8 +153,8 @@
 
 /* Print as a traditional resume */
 @page {
-  size: letter;
-  margin: 0.4in 0.5in;
+  size: A4;
+  margin: 0.45in 0.55in;
 }
 
 @media print {
@@ -164,8 +164,8 @@
   html,
   body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 8.5pt;
-    line-height: 1.16;
+    font-size: 10.5pt;
+    line-height: 1.27;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -194,62 +194,62 @@
   }
 
   .resume-header {
-    margin: 0 0 0.08in;
+    margin: 0 0 0.12in;
   }
 
   .resume-header h1 {
     margin: 0;
-    font-size: 17pt;
-    line-height: 1;
+    font-size: 21pt;
+    line-height: 1.05;
   }
 
   .resume-contact {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0 0.06in;
-    margin-top: 0.03in;
-    font-size: 8pt;
+    gap: 0 0.08in;
+    margin-top: 0.045in;
+    font-size: 9.5pt;
   }
 
   .resume-section {
-    margin-top: 0.08in;
+    margin-top: 0.14in;
   }
 
   .resume-section > h2 {
-    margin: 0 0 0.035in;
-    padding-bottom: 0.015in;
-    font-size: 10pt;
-    line-height: 1.05;
+    margin: 0 0 0.055in;
+    padding-bottom: 0.025in;
+    font-size: 11pt;
+    line-height: 1.1;
     break-after: avoid;
     page-break-after: avoid;
   }
 
   .resume-entry + .resume-entry {
-    margin-top: 0.055in;
+    margin-top: 0.095in;
   }
 
   .resume-entry h3 {
-    font-size: 9pt;
-    line-height: 1.1;
+    font-size: 10.5pt;
+    line-height: 1.15;
   }
 
   .resume-entry__row {
-    gap: 0.1in;
+    gap: 0.12in;
     break-inside: avoid;
   }
 
   .resume-list {
-    margin-top: 0.015in;
-    padding-inline-start: 0.18in;
+    margin-top: 0.025in;
+    padding-inline-start: 0.2in;
   }
 
   .resume-list li {
-    padding-inline-start: 0.02in;
+    padding-inline-start: 0.025in;
   }
 
   .resume-list li + li {
-    margin-top: 0.012in;
+    margin-top: 0.02in;
   }
 
   .resume-section {
